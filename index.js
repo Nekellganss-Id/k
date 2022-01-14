@@ -585,6 +585,7 @@ ${readMore}
  
 *𖨠Stiker*
  *${hrmn} ${prefix}sticker* _<reply image,gif>_
+ *${hrmn} ${prefix}telesticker* _Text_
  *${hrmn} ${prefix}ttp* _Text_
  *${hrmn} ${prefix}attp1* _Text_
  *${hrmn} ${prefix}attp2* _Text_
@@ -794,12 +795,14 @@ ${readMore}
  *𖨠Dowloader*
   *${hrmn} ${prefix}ytplay* _Text Lagu_
   *${hrmn} ${prefix}ytsearch* _Text Lagu_
-  *${hrmn} ${prefix}ytnp3* _Text Lagu_
+  *${hrmn} ${prefix}ytmp3* _Text Lagu_
   *${hrmn} ${prefix}ytmp4* _Text Lagu_
-  *${hrmn} ${prefix}fb* _Url_
-  *${hrmn} ${prefix}twitter* _Url_
+  *${hrmn} ${prefix}fbdl* _Url_
+  *${hrmn} ${prefix}twdl* _Url_
   *${hrmn} ${prefix}mediafire* _Url_
-  *${hrmn} ${prefix}ig* _Url_
+  *${hrmn} ${prefix}igdl* _Url_
+  *${hrmn} ${prefix}ttnowm* _Url_
+  *${hrmn} ${prefix}ttmp3* _Url_
 
 *𖨠Wibu*
   *${hrmn} ${prefix}waifu*
@@ -807,8 +810,8 @@ ${readMore}
   *${hrmn} ${prefix}neko*
   *${hrmn} ${prefix}husbu*
   *${hrmn} ${prefix}elf*
-  *${hrmn} ${prefix}shinobu*
-  *${hrmn} ${prefix}elaina*
+  *${hrmn} ${prefix}exo*
+  *${hrmn} ${prefix}shota*
   *${hrmn} ${prefix}kanna*
   *${hrmn} ${prefix}sagiri*
   *${hrmn} ${prefix}megumin*
@@ -816,6 +819,11 @@ ${readMore}
   
 *│➸18+*
   *_Fitur Ini Khusus Premium!_*
+  *${hrmn} ${prefix}nhentai* _Url_
+  *${hrmn} ${prefix}nhentaisearch* _Url_
+  *${hrmn} ${prefix}nekopoi* _Url_
+  *${hrmn} ${prefix}nekopoisearch* _Url_
+  *${hrmn} ${prefix}nhentaipdf* _Url_
   *${hrmn} ${prefix}xnxxsearch* _Link/Url_
   *${hrmn} ${prefix}xhamstersearch* _Link/Url_
   
@@ -969,53 +977,67 @@ case 'ytplay':
                     get_audio = await getBuffer(get_result.link)
                     await herman.sendMessage(from, get_audio, video, { mimetype: 'video/mp4', filename: `${get_result.title}.mp4`, quoted: lol })
 break             
-//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Herman Chanel)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
-          case 'fb':
-          case 'facebook':
-              if (!q) return reply('Link Nya?')
-              reply(mess.wait)
-              data = await fetchJson(`https://api.lolhuman.xyz/api/facebook?apikey=${apikey}&url=${args[0]}`)
-              ini_video = await getBuffer(data.result)
-              herman.sendMessage(from, ini_video, video, { quoted: mek })
-              break
-case 'mediafire':
-              if (args.length < 1) return reply('Link Nya Mana? ')
-              if(!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error.Iv)
-              teks = args.join(' ')
-              res = await mediafireDl(teks)
-              result = `*MediaFire Downloader*
-               
-🍁 Nama : ${res[0].nama}
-🍁 Ukuran : ${res[0].size}
-🍁 Link : ${res[0].link}
-
-_*Tunggu Proses Upload Media......*_`
-              reply(result)
-              sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
-              break
-case 'twitter':
-              if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(mess.Iv)
-              if (!q) return reply('Linknya?')
-              ten = args[0]
-              var res = await twitterGetUrl(`${ten}`)
-             .then(g => {
-              ren = `${g.download[2].url}`
-              sendMediaURL(from,ren,'Done')
-})
-              break
-case 'ytdesc':
-              if (args.length < 1) return reply('Video/Link Yt Nya Mana? ')
-              teks = args.join(' ')
-              res = await yts(teks)
-              reply(res.all[0].description)
-              break
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Nekell H4xor)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
+case 'igdl':
+                    if (args.length == 0) return reply(`Example: ${prefix + command} https://www.instagram.com/p/CJ8XKFmJ4al/?igshid=1acpcqo44kgkn`)
+                    ini_url = args[0]
+                    ini_url = await fetchJson(`https://api.lolhuman.xyz/api/instagram?apikey=${apikey}&url=${ini_url}`)
+                    ini_url = ini_url.result
+                    ini_type = image
+                    if (ini_url.includes(".mp4")) ini_type = video
+                    ini_buffer = await getBuffer(ini_url)
+                    await herman.sendMessage(from, ini_buffer, ini_type, { quoted: mek })
+                    break
+                case 'igdl2':
+                    if (args.length == 0) return reply(`Example: ${prefix + command} https://www.instagram.com/p/CJ8XKFmJ4al/?igshid=1acpcqo44kgkn`)
+                    ini_url = args[0]
+                    ini_url = await fetchJson(`https://api.lolhuman.xyz/api/instagram2?apikey=${apikey}&url=${ini_url}`)
+                    ini_result = ini_url.result.media
+                    for (var x of ini_result) {
+                        ini_type = image
+                        if (x.includes(".mp4")) ini_type = video
+                        ini_buffer = await getBuffer(x)
+                        await herman.sendMessage(from, ini_buffer, ini_type, { quoted: mek })
+                    }
+                    break
+                case 'twtdl':
+                    if (args.length == 0) return reply(`Example: ${prefix + command} https://twitter.com/gofoodindonesia/status/1229369819511709697`)
+                    ini_url = args[0]
+                    ini_url = await fetchJson(`https://api.lolhuman.xyz/api/twitter?apikey=${apikey}&url=${ini_url}`)
+                    ini_url = ini_url.result
+                    ini_url = ini_url[ini_url.length - 1].link
+                    ini_buffer = await getBuffer(ini_url)
+                    await herman.sendMessage(from, ini_buffer, video, { quoted: lol })
+                    break
+                case 'fbdl':
+                    if (args.length == 0) return reply(`Example: ${prefix + command} https://id-id.facebook.com/SamsungGulf/videos/video-bokeh/561108457758458/`)
+                    ini_url = args[0]
+                    ini_url = await fetchJson(`https://api.lolhuman.xyz/api/facebook?apikey=${apikey}&url=${ini_url}`)
+                    ini_url = ini_url.result[0].link
+                    ini_buffer = await getBuffer(ini_url)
+                    await herman.sendMessage(from, ini_buffer, video, { quoted: mek })
+break
 case "tag":
 			if (args.length < 1) return reply(`Penggunaan ${prefix}tag 62xnxx`)
             var nomqm = `${body.slice(5)}@s.whatsapp.net`
 					tagq = `@${nomqm.split('@')[0]}` 
 					herman.sendMessage(from, tagq, text, { quoted: ftrol, contextInfo: { forwardingScore: 508, isForwarded: true, mentionedJid: [nomqm]}})
 			break
-//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Herman Chanel)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
+case 'tiktoknowm':
+                    if (args.length == 0) return reply(`Example: ${prefix + command} https://vt.tiktok.com/ZSwWCk5o/`)
+                    ini_url = args[0]
+                    ini_url = `https://api.lolhuman.xyz/api/tiktok?apikey=${apikey}&url=${ini_url}`
+                    get_result = await fetchJson(ini_url)
+                    ini_buffer = await getBuffer(get_result.result.link)
+                    await herman.sendMessage(from, ini_buffer, video, { quoted: mek })
+                    break
+                case 'tiktokmusic':
+                    if (args.length == 0) return reply(`Example: ${prefix + command} https://vt.tiktok.com/ZSwWCk5o/`)
+                    ini_link = args[0]
+                    get_audio = await getBuffer(`https://api.lolhuman.xyz/api/tiktokmusic?apikey=${apikey}&url=${ini_link}`)
+                    await herman.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
+                    break
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Nekell H4xor)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
 			case 'tagme':
                   var nomqm = mek.participant
 				    tagu = `@${nomqm.split('@s.whatsapp.net')[0]}`
@@ -1186,7 +1208,11 @@ break
           case 'husbu':
           case 'elf':
           case 'neko':
-          case 'elaina':
+          case 'shota':
+          case 'exo':
+          case 'bts':
+          case 'art':
+          case 'shinobu':
               let wipu = (await axios.get(`https://api.lolhuman.xyz/api/random/${command}?apikey=${apikey}`)).then((gambar) => {
               let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
               fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipu))
@@ -1284,6 +1310,16 @@ buffer = fs.readFileSync(ran)
 fakethumb(buffer,'By Nekell H4xor')
 fs.unlinkSync(ran)
 })
+break
+case 'telesticker':
+                    if (args.length == 0) return reply(`Example: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
+                    ini_url = args[0]
+                    ini_url = await fetchJson(`https://api.lolhuman.xyz/api/telestick?apikey=${apikey}&url=${ini_url}`)
+                    ini_sticker = ini_url.result.sticker
+                    for (sticker_ in ini_sticker) {
+                        ini_buffer = await getBuffer(ini_sticker[sticker_])
+                        await herman.sendMessage(from, ini_buffer, sticker)
+                    }
 break
 //▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Nekell H4xor)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
                case 'takestick':
@@ -1532,6 +1568,95 @@ getBuffer(`https://api.lolhuman.xyz/api/photooxy1/${command}?apikey=${apikey}&te
 herman.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Done Jangan Lupa Donasi`, quoted : ftrol})
 })
 break
+case 'nhentai':
+  if (isPrem) return reply(mess.only.premium)    
+  if (!isUser) return reply(mess.only.userB)
+  if (args.length == 0) return reply(`Example: ${prefix + command} 344253`)
+                    henid = args[0]
+                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentai/${henid}?apikey=${apikey}`)
+                    get_result = get_result.result
+                    ini_txt = `Title Romaji : ${get_result.title_romaji}\n`
+                    ini_txt += `Title Native : ${get_result.title_native}\n`
+                    ini_txt += `Read Online : ${get_result.read}\n`
+                    get_info = get_result.info
+                    ini_txt += `Parodies : ${get_info.parodies}\n`
+                    ini_txt += `Character : ${get_info.characters.join(", ")}\n`
+                    ini_txt += `Tags : ${get_info.tags.join(", ")}\n`
+                    ini_txt += `Artist : ${get_info.artists}\n`
+                    ini_txt += `Group : ${get_info.groups}\n`
+                    ini_txt += `Languager : ${get_info.languages.join(", ")}\n`
+                    ini_txt += `Categories : ${get_info.categories}\n`
+                    ini_txt += `Pages : ${get_info.pages}\n`
+                    ini_txt += `Uploaded : ${get_info.uploaded}\n`
+                    reply(ini_txt)
+break
+case 'nhentaipdf':
+  if (isPrem) return reply(mess.only.premium)    
+  if (!isUser) return reply(mess.only.userB)
+  if (args.length == 0) return reply(`Example: ${prefix + command} 344253`)
+                    henid = args[0]
+                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=${apikey}`)
+                    get_result = get_result.result
+                    ini_buffer = await getBuffer(get_result)
+                    await herman.sendMessage(from, ini_buffer, document, { quoted: mek, mimetype: Mimetype.pdf, filename: `${henid}.pdf` })
+break
+case 'nhentaisearch':
+  if (isPrem) return reply(mess.only.premium)    
+  if (!isUser) return reply(mess.only.userB)
+  if (args.length == 0) return reply(`Example: ${prefix + command} Gotoubun No Hanayome`)
+                    query = args.join(" ")
+                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaisearch?apikey=${apikey}&query=${query}`)
+                    get_result = get_result.result
+                    ini_txt = "Result : \n"
+                    for (var x of get_result) {
+                        ini_txt += `Id : ${x.id}\n`
+                        ini_txt += `Title English : ${x.title_english}\n`
+                        ini_txt += `Title Japanese : ${x.title_japanese}\n`
+                        ini_txt += `Native : ${x.title_native}\n`
+                        ini_txt += `Upload : ${x.date_upload}\n`
+                        ini_txt += `Page : ${x.page}\n`
+                        ini_txt += `Favourite : ${x.favourite}\n\n`
+                    }
+                    reply(ini_txt)
+break
+case 'nekopoi':
+  if (isPrem) return reply(mess.only.premium)    
+  if (!isUser) return reply(mess.only.userB)
+  if (args.length == 0) return reply(`Example: ${prefix + command} https://nekopoi.care/isekai-harem-monogatari-episode-4-subtitle-indonesia/`)
+                    ini_url = args[0]
+                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/nekopoi?apikey=${apikey}&url=${ini_url}`)
+                    get_result = get_result.result
+                    ini_txt = `Title : ${get_result.anime}\n`
+                    ini_txt += `Porducers : ${get_result.producers}\n`
+                    ini_txt += `Duration : ${get_result.duration}\n`
+                    ini_txt += `Size : ${get_result.size}\n`
+                    ini_txt += `Sinopsis : ${get_result.sinopsis}\n`
+                    link = get_result.link
+                    for (var x in link) {
+                        ini_txt += `\n${link[x].name}\n`
+                        link_dl = link[x].link
+                        for (var y in link_dl) {
+                            ini_txt += `${y} - ${link_dl[y]}\n`
+                        }
+                    }
+                    ini_buffer = await getBuffer(get_result.thumb)
+                    await herman.sendMessage(from, ini_buffer, image, { quoted: mek, caption: ini_txt })
+break
+case 'nekopoisearch':
+  if (isPrem) return reply(mess.only.premium)    
+  if (!isUser) return reply(mess.only.userB)
+  if (args.length == 0) return reply(`Example: ${prefix + command} Isekai Harem`)
+                    query = args.join(" ")
+                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/nekopoisearch?apikey=${apikey}&query=${query}`)
+                    get_result = get_result.result
+                    ini_txt = ""
+                    for (var x of get_result) {
+                        ini_txt += `Title : ${x.title}\n`
+                        ini_txt += `Link : ${x.link}\n`
+                        ini_txt += `Thumbnail : ${x.thumbnail}\n\n`
+                    }
+                    reply(ini_txt)
+break
 case 'xhamstersearch':
   if (isPrem) return reply(mess.only.premium)    
   if (!isUser) return reply(mess.only.userB)
@@ -1570,7 +1695,7 @@ case 'xhamster':
                         ini_txt += `${x.type} - ${x.link}\n\n`
                     }
                     thumbnail = await getBuffer(get_result.thumbnail)
-                    await herman.sendMessage(from, thumbnail, image, { quoted: lol, caption: ini_txt })
+                    await herman.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 break
 case 'xnxxsearch':
   if (isPrem) return reply(mess.only.premium)    
