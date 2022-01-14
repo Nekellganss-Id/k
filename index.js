@@ -1213,17 +1213,9 @@ break
           case 'bts':
           case 'art':
           case 'shinobu':
-              let wipu = (await axios.get(`https://api.lolhuman.xyz/api/random/${command}?apikey=${apikey}`)).then((gambar) => {
-              let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
-              fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipu))
-		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: '🐲Next'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'🍁OWNER'},type:1}]
-              imageMsg = ( await herman.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
-              buttonsMessage = {footerText:'Tetaplah Bahagia', imageMessage: imageMsg,
-              contentText:`JANGAN LUPA DONASI`,buttons,headerType:4}
-              prep = await agam.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
-              herman.relayWAMessage(prep)
-              fs.unlinkSync(`./${sender}.jpeg`)
-              })
+              getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${apikey}`).then((gambar) => {
+                        herman.sendMessage(from, gambar, image, { quoted: mek })
+                    })
               break
           case 'tourl':
     if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedVideo ) && args.length == 0) {
