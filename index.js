@@ -1382,14 +1382,9 @@ case 'kanna':
 case 'sagiri':
 case 'megumin':
 case 'wallnime':
-reply(mess.wait)
-buff = await getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${apikey}`)
-buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
-imageMsg = (await herman.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, }))imageMessage
-buttonsMessage = {footerText:'©Created By Nekell H4xor', imageMessage: imageMsg,
-contentText:`Done ✓ Jangan Lupa Donasi Mekk`,buttons,headerType:4}
-prep = await herman.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-herman.relayWAMessage(prep)
+getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${apikey}`).then((gambar) => {
+                        lolhuman.sendMessage(from, gambar, image, { quoted: lol })
+                    })
 break 
 case 'hentai':
 case 'hentaigif': 		
