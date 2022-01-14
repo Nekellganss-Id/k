@@ -821,7 +821,6 @@ ${readMore}
   *_Fitur Ini Khusus Premium!_*
   *${hrmn} ${prefix}nhentai* _Url_
   *${hrmn} ${prefix}nhentaisearch* _Url_
-  *${hrmn} ${prefix}nekopoi* _Url_
   *${hrmn} ${prefix}nekopoisearch* _Url_
   *${hrmn} ${prefix}nhentaipdf* _Url_
   *${hrmn} ${prefix}xnxxsearch* _Link/Url_
@@ -1595,29 +1594,6 @@ case 'nhentaisearch':
                         ini_txt += `Favourite : ${x.favourite}\n\n`
                     }
                     reply(ini_txt)
-break
-case 'nekopoi':
-  if (isPrem) return reply(mess.only.premium)    
-  if (!isUser) return reply(mess.only.userB)
-  if (args.length == 0) return reply(`Example: ${prefix + command} https://nekopoi.care/isekai-harem-monogatari-episode-4-subtitle-indonesia/`)
-                    ini_url = args[0]
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/nekopoi?apikey=${apikey}&url=${ini_url}`)
-                    get_result = get_result.result
-                    ini_txt = `Title : ${get_result.anime}\n`
-                    ini_txt += `Porducers : ${get_result.producers}\n`
-                    ini_txt += `Duration : ${get_result.duration}\n`
-                    ini_txt += `Size : ${get_result.size}\n`
-                    ini_txt += `Sinopsis : ${get_result.sinopsis}\n`
-                    link = get_result.link
-                    for (var x in link) {
-                        ini_txt += `\n${link[x].name}\n`
-                        link_dl = link[x].link
-                        for (var y in link_dl) {
-                            ini_txt += `${y} - ${link_dl[y]}\n`
-                        }
-                    }
-                    ini_buffer = await getBuffer(get_result.thumb)
-                    await herman.sendMessage(from, ini_buffer, image, { quoted: mek, caption: ini_txt })
 break
 case 'nekopoisearch':
   if (isPrem) return reply(mess.only.premium)    
