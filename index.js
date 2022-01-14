@@ -1416,14 +1416,9 @@ case 'lewdanimegirls':
 case 'biganimetiddies':
 case 'animebellybutton':
 case 'hentai4everyone':
-buff = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${apikey}`).then((gambar) => {
-buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: '📂️Next'},type:1}]
-imageMsg = (await herman.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, }))imageMessage
-buttonsMessage = {footerText:'©Created By Nekell H4xor', imageMessage: imageMsg,
-contentText:`Done ✓ Jangan Lupa Donasi`,buttons,headerType:4}
-prep = await herman.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-herman.relayWAMessage(prep)
-})
+   await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${apikey}`).then((gambar) => {
+                        herman.sendMessage(from, gambar, image, { quoted: mek })
+                    })
 break
 case 'bj':
 case 'ero':
@@ -1466,14 +1461,9 @@ case 'wallpaper':
 case 'pussy_jpg':
 case 'kemonomimi':
 case 'nsfw_avatar':
-buff = await getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${apikey}`).then((gambar) => {
-buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: '➡️Next'},type:1}]
-imageMsg = (await herman.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, }))imageMessage
-buttonsMessage = {footerText:'©Created By Nekell H4xor', imageMessage: imageMsg,
-contentText:`Done ✓ Jangan Lupa Donasi Cokk`,buttons,headerType:4}
-prep = await herman.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
-herman.relayWAMessage(prep)
-})
+getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${apikey}`).then((gambar) => {
+                        herman.sendMessage(from, gambar, image, { quoted: mek })
+                    })
 break
 case 'blackpink':
                 case 'neon':
