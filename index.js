@@ -1318,7 +1318,7 @@ break
                     if ((isMedia && !herman.message.videoMessage || isQuotedSticker)) {
                         if (args.length == 0) return reply(`Example: ${prefix + command} Nekell|H4xor`)
                         const encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(lol).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : lol
-                        filePath = await herman downloadAndSaveMediaMessage(encmedia, filename = getRandom());
+                        filePath = await herman.downloadAndSaveMediaMessage(encmedia, filename = getRandom());
                         file_name = getRandom(".webp")
                         ini_txt = args.join(" ").split("|")
                         request({
