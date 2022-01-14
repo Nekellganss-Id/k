@@ -1189,7 +1189,7 @@ break
           case 'elaina':
               let wipu = (await axios.get(`https://api.lolhuman.xyz/api/random/${command}?apikey=${apikey}`)).then((gambar) => {
               let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
-              fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
+              fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipu))
 		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: '🐲Next'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'🍁OWNER'},type:1}]
               imageMsg = ( await herman.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
               buttonsMessage = {footerText:'Tetaplah Bahagia', imageMessage: imageMsg,
