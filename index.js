@@ -37,15 +37,16 @@ const util = require('util')
 const moment = require("moment-timezone");
 const settings = JSON.parse(fs.readFileSync('./settings.json'))
 const imgbb = require('imgbb-uploader')
+const prem = JSON.parse(fs.readFileSync('./database/premium.json'))
 const user = JSON.parse(fs.readFileSync('./database/regi.json'))
 const antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
 const { addCommands, checkCommands, deleteCommands } = require('./lib/commands1.js')
 let commandsDB = JSON.parse(fs.readFileSync('./lib/commands.json'))
 const { uploadimg, upload } = require('./lib/uploadimg')
-//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Herman Chanel)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(NekellH4xor)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
 botname = "CornFake-Bot"
 owner = ["6289695073357@s.whatsapp.net"];
-name = "Nekell h4xor"
+name = "Nekell H4xor"
 premium = ["6289695073357@s.whatsapp.net"];
 battery = {
   persen: "" || "tidak terdeteksi",
@@ -60,7 +61,7 @@ lolkey ='e39b4bc1fbdc65408e6451fd'
 defttt = ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"];
 antideleted = true;
 self = false;
-//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Herman Chanel)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(NekellH4xor)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
 // time
 function tanggal(){
   myMonths = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
@@ -166,11 +167,11 @@ module.exports = (herman) => {
         time_wel = moment.tz("Asia/Jakarta").format("HH:mm");
         teks = `Halo ${anu_user} Welcome\nIntro Dulu\n• Nama:\n• Umur:\n• Status:\n• Askot:\nDi isi ya biar Kenal Wkwk`;
         buff = await getBuffer(
-          `https://api.lolhuman.xyz/api/base/welcome?apikey=${apikey}username=${anu_user}&descriminator=${
+          `http://hadi-api.herokuapp.com/api/card/welcome?nama=${anu_user}&descriminator=${
             groupMembers.length
           }&memcount=${memeg}&gcname=${encodeURI(
             mdata.subject
-          )}&img1=${pp_user}&img2=${pp_grup}&bg=https://i.ibb.co/8B6Q84n/LTqHsfYS.jpg`
+          )}&pp=${pp_user}&bg=https://telegra.ph/file/ea0d60b2e24ce056ee1d7.jpg`
         );
         buttons = [
           { buttonId: `.herman`, buttonText: { displayText: "Selamat Datang Beban Baru👍" }, type: 1 },
@@ -203,11 +204,11 @@ module.exports = (herman) => {
         memeg = mdata.participants.length;
         out = `Sayonara ${anu_user}`;
         buff = await getBuffer(
-          `https://api.lolhuman.xyz/api/base/leave?apikey=${apikey}username=${anu_user}&descriminator=${
+          `http://hadi-api.herokuapp.com/api/card/goodbye?nama=${anu_user}&descriminator=${
            groupMembers.length
           }&memcount=${memeg}&gcname=${encodeURI(
             mdata.subject
-          )}&img1=${pp_user}&img2=${pp_group}&bg=https://i.ibb.co/8B6Q84n/LTqHsfYS.jpg`
+          )}&pp=${pp_user}&bg=https://telegra.ph/file/ea0d60b2e24ce056ee1d7.jpg`
         );
         buttons = [
           { buttonId: `.herman`, buttonText: { displayText: "Good Bye Beban!🥴" }, type: 1 },
@@ -1309,11 +1310,11 @@ case 'patrick':
 	} else {
 	  reply('Foto Nya Mana anjim 🗿')
 	}
-	break
+break
 case 'attp':
 case 'attp2':
 if (args.length == 0) return reply(`Example: ${prefix + command} Hai`)
-buffer = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${apikey}&text=${text}`)
+buffer = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${apikey}&text=${encodeURI(q)}`)
 herman.sendMessage(from, buffer, sticker, { quoted: mek })
 break
 case 'toimg':
@@ -1329,7 +1330,7 @@ costum(buffer, image, Verived, `Jangan Lupa Donasi`)
 fs.unlinkSync(ran)
 })
 break
-//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Herman Chanel)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Nekell H4xor)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
                case 'smeme':
              if(!c) return reply(`Example :Reply sticker dengan Caption${prefix + command} herman` )
              if (mek.message.extendedTextMessage != undefined || mek.message.extendedTextMessage != null) {
@@ -1377,7 +1378,7 @@ case 'wetglass':
 		
                     if (args.length == 0) return reply(`Example: ${prefix + command} nekell h4xor`)
                     ini_txt = args.join(" ")
-                    ini_buffer = await getBuffer(`http://api.lolhuman.xyz/api/ephoto1/${command}?apikey=${apikey}&text=${ini_txt}`)
+                    ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/${command}?apikey=${apikey}&text=${ini_txt}`)
                     herman.sendMessage(from, ini_buffer, image, { quoted: mek})
                     break
 case 'kanna':
@@ -1509,7 +1510,7 @@ case 'blackpink':
                 case 'thunder':
 if (args.length == 0) return reply(`Teksnya Mana ?\nContoh : ${prefix + command} nekell h4xor`)
 ini_txt = args.join(" ")
-getBuffer(`http://api.lolhuman.xyz/api/textprome/${command}?apikey=${apikey}&text=${ini_txt}`).then((gambar) => {
+getBuffer(`https://api.lolhuman.xyz/api/textprome/${command}?apikey=${apikey}&text=${ini_txt}`).then((gambar) => {
 herman.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Done ✓ Jangan Lupa Donasi Mekk`, quoted : ftrol})
 })
 break
@@ -1539,7 +1540,7 @@ case 'shadow':
                 case 'carvedwood':
                     if (args.length == 0) return reply(`Teksnya Mana ?\nContoh : ${prefix + command} nekell h4xor`)
 ini_txt = args.join(" ")
-getBuffer(`http://api.lolhuman.xyz/api/photooxy1/${command}?apikey=${apikey}&text=${ini_txt}`).then((gambar) => {
+getBuffer(`https://api.lolhuman.xyz/api/photooxy1/${command}?apikey=${apikey}&text=${ini_txt}`).then((gambar) => {
 herman.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Done Jangan Lupa Donasi`, quoted : ftrol})
 })
 break
@@ -1548,7 +1549,7 @@ case 'xhamstersearch':
   if (!isUser) return reply(mess.only.userB)
   if (args.length == 0) return reply(`Example: ${prefix + command} Japanese`)
                     query = args.join(" ")
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/xhamstersearch?apikey=${apikey}&query=${query}`)
+                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/${command}?apikey=${apikey}&query=${query}`)
                     get_result = get_result.result
                     ini_txt = ""
                     for (var x of get_result) {
@@ -1564,7 +1565,7 @@ case 'xhamster':
   if (!isUser) return reply(mess.only.userB)
   if (args.length == 0) return reply(`Example: ${prefix + command} https://xhamster.com/videos/party-with-friends-end-in-awesome-fucking-5798407`)
                     query = args.join(" ")
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/xhamster?apikey=${apikey}&url=${query}`)
+                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/${command}?apikey=${apikey}&url=${query}`)
                     get_result = get_result.result
                     ini_txt = `Title : ${get_result.title}\n`
                     ini_txt += `Duration : ${get_result.duration}\n`
@@ -1588,7 +1589,7 @@ case 'xnxxsearch':
   if (!isUser) return reply(mess.only.userB)
   if (args.length == 0) return reply(`Example: ${prefix + command} Japanese`)
                     query = args.join(" ")
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/xnxxsearch?apikey=${apikey}&query=${query}`)
+                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/${command}?apikey=${apikey}&query=${query}`)
                     get_result = get_result.result
                     ini_txt = ""
                     for (var x of get_result) {
@@ -1602,10 +1603,11 @@ case 'xnxxsearch':
                     reply(ini_txt)
 break
 case 'xnxx':
-  if (!isPrem) return reply('bukan lu idih najis geer')
+  if (isPrem) return reply(mess.only.premium)    
+  if (!isUser) return reply(mess.only.userB)
   if (args.length == 0) return reply(`Example: ${prefix + command} https://www.xnxx.com/video-uy5a73b/mom_is_horny_-_brooklyn`)
                     query = args.join(" ")
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/xnxx?apikey=${apikey}&url=${query}`)
+                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/${command}?apikey=${apikey}&url=${query}`)
                     get_result = get_result.result
                     ini_txt = `Title : ${get_result.title}\n`
                     ini_txt += `Duration : ${get_result.duration}\n`
@@ -1740,8 +1742,8 @@ break
         case 'stickerwm':
         case 'sticker':
         case 's':
-          var a = "Dibuat Oleh NekellH4xor";
-          var b = "+6289695073357";
+          var a = "NEKELL GANTENG BANGET GA ADA OBAT!";
+          var b = "KAMU KAYA KONTOL:V";
           if (isMedia && !mek.message.videoMessage || isQuotedImage ) {
           const encmedia = isQuotedImage   ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
            media = await herman.downloadAndSaveMediaMessage(encmedia)
@@ -1928,12 +1930,12 @@ herman.sendMessage(from, man, MessageType.audio, {quoted: fvideo, mimetype: 'aud
         break;
           case 'owner':
           const vacrd = `BEGIN:VCARD\n`+`VERSION:3.0\n`+
-                        `FN:owner Bot\n`+
+                        `FN:Owner CornFake-Bot\n`+
                         `ORG:Developer ${herman.user.name}\n`+
-                        'TEL;type=CELL;type=VOICE;waid=62882220799992' +
-                        ':+62882220799992\n' + 
+                        'TEL;type=CELL;type=VOICE;waid=6289695073357' +
+                        ':+6289695073357\n' + 
                         'END:VCARD'
-          herman.sendMessage(from, {display: "owner Bot", vcard: vacrd}, contact, {quoted: mek})
+          herman.sendMessage(from, {display: "ownerbot", vcard: vacrd}, contact, {quoted: mek})
           man = fs.readFileSync('./🎧/hermanchanel1.mp3');
 herman.sendMessage(from, man, MessageType.audio, {quoted: fvideo, mimetype: 'audio/mp4', ptt:true})
           break;
@@ -1998,6 +2000,18 @@ if (budy.includes("kontol")){  // JAN DI UBAH TOD
         }
          if (budy.includes("anj")){  
         reply(`Ngapain Lu Manggil Anjing`)
+        }
+        if (budy.includes("mmk")){
+        reply(`Lu Yang Mmk`)
+        }
+        if (budy.includes("memek")){
+        reply(`Lu Yang Memek`)
+        }
+        if (budy.includes("kell,Kell")){
+        reply(`Iya Itu Owner Ku`)
+        }
+        if (budy.includes("Nekell,nekell")){
+        reply(`Iya Itu Owner Ku`)
         }
 if (body.startsWith(`${prefix}${command}`)) {
 comd = `      ────────────────\nʜᴇɪ *${pushname}* !!!\nperintah/comand *${prefix}${command}*\nTidak Ada Dalam *${prefix}menu*\n      ────────────────`
