@@ -1,9 +1,17 @@
 //new bang
-//wa : 6289695073357
-//Ig : @gataunekell
-//Fb : Nekell Ganss
-//Jangan Lupa Donasi
-//reuplod ijin wa.me//6289695073357
+//subscribe yo @herman Chanel
+//next video gw update ni sc
+//tnggu video selanjutnya ye bang
+//go 1k Subscriber aminn
+//reuplod ijin wa.me//6283146208804
+//╔╗───────────────────
+//║╚╗╔═╗╔╦╗╔══╗╔═╗─╔═╦╗
+//║║║║╩╣║╔╝║║║║║╬╚╗║║║║
+//╚╩╝╚═╝╚╝─╚╩╩╝╚══╝╚╩═╝
+//╔═╗╔╗───────────────
+//║╔╝║╚╗╔═╗─╔═╦╗╔═╗╔╗─
+//║╚╗║║║║╬╚╗║║║║║╩╣║╚╗
+//╚═╝╚╩╝╚══╝╚╩═╝╚═╝╚═╝
 //────────────────────
 const {
   WAConnection,
@@ -37,17 +45,16 @@ const util = require('util')
 const moment = require("moment-timezone");
 const settings = JSON.parse(fs.readFileSync('./settings.json'))
 const imgbb = require('imgbb-uploader')
-const prem = JSON.parse(fs.readFileSync('./database/premium.json'))
 const user = JSON.parse(fs.readFileSync('./database/regi.json'))
 const antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
 const { addCommands, checkCommands, deleteCommands } = require('./lib/commands1.js')
 let commandsDB = JSON.parse(fs.readFileSync('./lib/commands.json'))
 const { uploadimg, upload } = require('./lib/uploadimg')
-//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(NekellH4xor)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
-botname = "CornFake-Bot"
-owner = ["6289695073357@s.whatsapp.net"];
-name = "Nekell H4xor"
-premium = ["6289695073357@s.whatsapp.net"];
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Herman Chanel)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
+botname = "Herman Botz"
+owner = ["6283146208804@s.whatsapp.net"];
+name = "Hermansyah"
+premium = ["6283146208804@s.whatsapp.net"];
 battery = {
   persen: "" || "tidak terdeteksi",
   charger: "" || false
@@ -56,12 +63,11 @@ blocked = [];
 hrmn = '•'
 roomttt = [];
 apikey1 = 'KurrXd'
-apikey = 'e39b4bc1fbdc65408e6451fd'
-lolkey ='e39b4bc1fbdc65408e6451fd'
+lolkey = '682aeab645ed61cf137cf971' 
 defttt = ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"];
 antideleted = true;
 self = false;
-//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(NekellH4xor)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Herman Chanel)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
 // time
 function tanggal(){
   myMonths = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
@@ -134,7 +140,7 @@ module.exports = (herman) => {
       console.log(`[ GROUP SETTING CHANGE ]\ngroup : ${metadata.subject}`);
     }
   });
-  // Welcome Simple By Nekell H4xor
+  // Welcome Simple By Herman Chanel
   herman.on("group-participants-update", async (anu) => {
     try {
       groupMet = await herman.groupMetadata(anu.jid);
@@ -165,16 +171,16 @@ module.exports = (herman) => {
         let v = herman.contacts[num] || { notify: num.replace(/@.+/, "") };
         anu_user = v.vname || v.notify || num.split("@")[0];
         time_wel = moment.tz("Asia/Jakarta").format("HH:mm");
-        teks = `Halo Beban ${anu_user} Welcome\nIntro Dulu\n• Nama:\n• Umur:\n• Status:\n• Askot:\nDi isi ya biar Kenal Wkwk`;
+        teks = `Halo ${anu_user} Welcome\nIntro Dulu\n• Nama:\n• Umur:\n• Status:\n• Askot:\nDi isi ya biar Kenal Wkwk`;
         buff = await getBuffer(
           `http://hadi-api.herokuapp.com/api/card/welcome?nama=${anu_user}&descriminator=${
             groupMembers.length
           }&memcount=${memeg}&gcname=${encodeURI(
             mdata.subject
-          )}&pp=${pp_user}&bg=https://i.ibb.co/cgFpnRL/20220114-162121.jpg`
+          )}&pp=${pp_user}&bg=https://telegra.ph/file/ea0d60b2e24ce056ee1d7.jpg`
         );
         buttons = [
-          { buttonId: `.herman`, buttonText: { displayText: "Selamat Datang Beban Baru👍" }, type: 1 },
+          { buttonId: `.herman`, buttonText: { displayText: "Selamat Datang" }, type: 1 },
         ];
         imageMsg = (
           await herman.prepareMessageMedia(buff, "imageMessage", {
@@ -183,7 +189,7 @@ module.exports = (herman) => {
         ).imageMessage;
         buttonsMessage = {
           contentText: `${teks}`,
-          footerText: "⌛Somoga Betah Di Grup Yang Gaguna Ini Ya!⌛",
+          footerText: "Somoga Betah",
           imageMessage: imageMsg,
           buttons: buttons,
           headerType: 4,
@@ -202,16 +208,16 @@ module.exports = (herman) => {
         anu_user = w.vname || w.notify || num.split("@")[0];
         time_wel = moment.tz("Asia/Jakarta").format("HH:mm");
         memeg = mdata.participants.length;
-        out = `Kena Mental Kahh? Aowkwowk ${anu_user}`;
+        out = `Sayonara ${anu_user}`;
         buff = await getBuffer(
           `http://hadi-api.herokuapp.com/api/card/goodbye?nama=${anu_user}&descriminator=${
            groupMembers.length
           }&memcount=${memeg}&gcname=${encodeURI(
             mdata.subject
-          )}&pp=${pp_user}&bg=https://i.ibb.co/cgFpnRL/20220114-162121.jpg`
+          )}&pp=${pp_user}&bg=https://telegra.ph/file/ea0d60b2e24ce056ee1d7.jpg`
         );
         buttons = [
-          { buttonId: `.herman`, buttonText: { displayText: "Good Bye Beban!🥴" }, type: 1 },
+          { buttonId: `.herman`, buttonText: { displayText: "Good Bye" }, type: 1 },
         ];
         imageMsg = (
           await herman.prepareMessageMedia(buff, "imageMessage", {
@@ -220,7 +226,7 @@ module.exports = (herman) => {
         ).imageMessage;
         buttonsMessage = {
           contentText: `${out}`,
-          footerText: "🏴‍☠️Akhir Nya Beban Keluarga Telah Berkurang, Semoga Tenang Di Alam Sana!🏴‍☠️",
+          footerText: "Jangan Balik Lagi Lu Anjim",
           imageMessage: imageMsg,
           buttons: buttons,
           headerType: 4,
@@ -373,7 +379,7 @@ return herman.sendMessage(id, buttonMessages, MessageType.buttonsMessage, option
       }
       const fvideo = {
 	 key: { 
-	      participant: '6289695073357@s.whatsapp.net'
+	      participant: '6283146208804@s.whatsapp.net'
 	       },
 	 message: { 
                  "videoMessage": { 
@@ -424,18 +430,18 @@ sellerJid: '0@s.whatsapp.net'
 ├ 🚀Hai ${pushname} ${ucapanWaktu} 
 ├ 🚀Sebelum Memakai Bot Verif Dulu Ya
 └❏`
-       const daftar2 = '```Ketik Tombol Di Bawah Untuk Verify\nJika Button Tidak kelihatan Ketik .verify ya```'
+       const daftar2 = '```Ketik Tombol Di Bawah Untuk Verify Kak\nJika Button Tidak kelihatan Ketik .verify ya```'
        const daftar3 = [
           {
             buttonId: `.verify`,
             buttonText: {
-              displayText: '🗿Touch Here To verify🗿 © NekellH4xor',
+              displayText: `🎧VERIFY🎧`,
             },
             type: 1,
           },]
 	mess = {
-				wait: '*Sabar Cokk Lagi Proses*',
-				success: '*Donee Cokk... Jangan Lupa Vcs:v*',
+				wait: '*Sabar.Permintaan Kamu Sedang Di Proses*',
+				success: '*Donee*',
 				error: {
 					stick: '*Gagal .Terjadi Kesalahan Saat Mengkonversi Gambar Ke Stiker*',
 					Iv: '*Link Tidak Valid!*'
@@ -449,7 +455,7 @@ sellerJid: '0@s.whatsapp.net'
 					userB: `Halo Kaa *${pushname}*, Kamu Belum Terdaftar Silahkan Ketik \n*${prefix}daftar*`,
 					admin: '*Maaf Perintah Ini Hanya Bisa Di Gunakan Oleh Admin Grup!*',
 					Badmin: '*Jadikan Bot Sebagai Admin Untuk Bisa Melakukan Perintah Ini!*',
-					publikG: 'Maaf Bot Sekarang Sudah Di Private Oleh Owner\nUntuk Lebih Jelasnya Ktik \n*${prefix}infobot*'
+					publikG: `Maaf Bot Sekarang Sudah Di Private Oleh Owner\nUntuk Lebih Jelasnya Ktik \n*${prefix}infobot*`
 				}
 			}
 
@@ -553,7 +559,7 @@ console.log(color(time2, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:
       const isQuotedSticker =
         type === "extendedTextMessage" && content.includes("stickerMessage");
       
-      //▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(NekellH4xor)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
+      //▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Herman Chanel)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
       if (isCmd && !isGroup) console.log("[",color("command","lime"),"]",time2,color(command,"lime"),"from",color(sender.split("@")[0],"cyan"))
       if (isCmd && isGroup) console.log("[",color("command","lime"),"]",time2,color(command,"lime"),"from",color(sender.split("@")[0],"cyan"),"in",color(groupName,"yellow"))
       if (listbut) console.log("[",color("command","lime"),"]",time2,color(listbut,"lime"),"from",color(sender.split("@")[0],"cyan"))
@@ -584,29 +590,25 @@ ${readMore}
  *${hrmn} ${prefix}report*
  
 *𖨠Stiker*
- *${hrmn} ${prefix}sticker* _<reply image,gif>_
- *${hrmn} ${prefix}telesticker* _Text_
- *${hrmn} ${prefix}ttp* _Text_
- *${hrmn} ${prefix}attp1* _Text_
- *${hrmn} ${prefix}attp2* _Text_
- *${hrmn} ${prefix}attp3* _Text_
- *${hrmn} ${prefix}attp4* _Text_
- *${hrmn} ${prefix}takestick* _Reply Sticker_
- *${hrmn} ${prefix}toimg* _Reply stikcer,gif sticker_
+ *${hrmn} ${prefix}sticker* _<reply image,video,sticker>_
+ *${hrmn} ${prefix}ttp*
+ *${hrmn} ${prefix}attp*
+ *${hrmn} ${prefix}smeme*
+ *${hrmn} ${prefix}toimg*
 
 *𖨠Group Menu*
- *${hrmn} ${prefix}antilink* _1=On Dan 0=Off_
+ *${hrmn} ${prefix}antilink*
  *${hrmn} ${prefix}daftar*
  *${hrmn} ${prefix}kicktime* _@_
- *${hrmn} ${prefix}hidetag* _Text_
- *${hrmn} ${prefix}tagall* _Text_
- *${hrmn} ${prefix}getpp* _Reply sticker,foto_
- *${hrmn} ${prefix}getinfo* _Text_
- *${hrmn} ${prefix}kapankah* _Text_
- *${hrmn} ${prefix}bisakah* _Text_
- *${hrmn} ${prefix}apakah* _Text_
- *${hrmn} ${prefix}benarkah* _Text_
-  *${hrmn} ${prefix}rate* _Text_
+ *${hrmn} ${prefix}hidetag*
+ *${hrmn} ${prefix}tagall*
+ *${hrmn} ${prefix}getpp*
+ *${hrmn} ${prefix}getinfo*
+ *${hrmn} ${prefix}kapankah*
+ *${hrmn} ${prefix}bisakah*
+ *${hrmn} ${prefix}apakah*
+ *${hrmn} ${prefix}benarkah*
+  *${hrmn} ${prefix}rate*
  
 *𖨠Rondom Menu*
  *${hrmn} ${prefix}randombokep*
@@ -629,49 +631,39 @@ ${readMore}
  *${hrmn} ${prefix}delprem*
  
  *𖨠Text Prome*
- *${hrmn} ${prefix}blackpink* _Text_
- *${hrmn} ${prefix}neon* _Text_
- *${hrmn} ${prefix}greenneon* _Text_
- *${hrmn} ${prefix}advanceglow* _Text_
- *${hrmn} ${prefix}futureneon* _Text_
- *${hrmn} ${prefix}sandwriting* _Text_
- *${hrmn} ${prefix}sandsummer* _Text_
- *${hrmn} ${prefix}sandengraved* _Text_
- *${hrmn} ${prefix}metaldark* _Text_
- *${hrmn} ${prefix}neonlight* _Text_
- *${hrmn} ${prefix}holographic* _Text_
- *${hrmn} ${prefix}text1917* _Text_
- *${hrmn} ${prefix}minion* _Text_
- *${hrmn} ${prefix}deluxesilver* _Text_
- *${hrmn} ${prefix}newyearcard* _Text_
- *${hrmn} ${prefix}bloodfrosted* _Text_
- *${hrmn} ${prefix}halloween* _Text_
- *${hrmn} ${prefix}jokerlogo* _Text_
- *${hrmn} ${prefix}fireworksparkle* _Text_
- *${hrmn} ${prefix}natureleaves* _Text_
- *${hrmn} ${prefix}bokeh* _Text_
- *${hrmn} ${prefix}toxic* _Text_
- *${hrmn} ${prefix}strawberry* _Text_
- *${hrmn} ${prefix}box3d* _Text_
- *${hrmn} ${prefix}roadwarning* _Text_
- *${hrmn} ${prefix}breakwall* _Text_
- *${hrmn} ${prefix}icecold* _Text_
- *${hrmn} ${prefix}luxury* _Text_
- *${hrmn} ${prefix}cloud* _Text_
- *${hrmn} ${prefix}summersand* _Text_
- *${hrmn} ${prefix}horrorblood* _Text_
- *${hrmn} ${prefix}thunder* _Text_
- *${hrmn} ${prefix}pornhub* _Text_
- *${hrmn} ${prefix}glitch* _Text_
- *${hrmn} ${prefix}avenger* _Text_
- *${hrmn} ${prefix}space* _Text_
- *${hrmn} ${prefix}ninjalogo* _Text_
- *${hrmn} ${prefix}marvelstudio* _Text_
- *${hrmn} ${prefix}lionlogo* _Text_
- *${hrmn} ${prefix}wolflogo* _Text_
- *${hrmn} ${prefix}stell3d* _Text_
- *${hrmn} ${prefix}wallgravity* _Text_
-
+ *${hrmn} ${prefix}blackpink*
+ *${hrmn} ${prefix}neon*
+ *${hrmn} ${prefix}greenneon*
+ *${hrmn} ${prefix}advanceglow*
+ *${hrmn} ${prefix}futureneon*
+ *${hrmn} ${prefix}sandwriting*
+ *${hrmn} ${prefix}sandsummer*
+ *${hrmn} ${prefix}sandengraved*
+ *${hrmn} ${prefix}metaldark*
+ *${hrmn} ${prefix}neonlight*
+ *${hrmn} ${prefix}holographic*
+ *${hrmn} ${prefix}text1917*
+ *${hrmn} ${prefix}minion*
+ *${hrmn} ${prefix}deluxesilver*
+ *${hrmn} ${prefix}newyearcard*
+ *${hrmn} ${prefix}bloodfrosted*
+ *${hrmn} ${prefix}halloween*
+ *${hrmn} ${prefix}jokerlogo*
+ *${hrmn} ${prefix}fireworksparkle*
+ *${hrmn} ${prefix}natureleaves*
+ *${hrmn} ${prefix}bokeh*
+ *${hrmn} ${prefix}toxic*
+ *${hrmn} ${prefix}strawberry*
+ *${hrmn} ${prefix}box3d*
+ *${hrmn} ${prefix}roadwarning*
+ *${hrmn} ${prefix}breakwall*
+ *${hrmn} ${prefix}icecold*
+ *${hrmn} ${prefix}luxury*
+ *${hrmn} ${prefix}cloud*
+ *${hrmn} ${prefix}summersand*
+ *${hrmn} ${prefix}horrorblood*
+ *${hrmn} ${prefix}thunder*
+ 
  *𖨠Rondom Anime*
  *${hrmn} ${prefix}bj*
  *${hrmn} ${prefix}ero*
@@ -700,7 +692,7 @@ ${readMore}
  *${hrmn} ${prefix}pussy*
  *${hrmn} ${prefix}femdom*
  *${hrmn} ${prefix}cuddle*
- *${hrmn} ${prefix}hentaigif*
+ *${hrmn} ${prefix}eroyuri*
  *${hrmn} ${prefix}cum_jpg*
  *${hrmn} ${prefix}blowjob*
  *${hrmn} ${prefix}erofeet*
@@ -716,36 +708,36 @@ ${readMore}
  *${hrmn} ${prefix}nsfw_avatar*
  
 *𖨠Photo 360*
- *${hrmn} ${prefix}wetglass* _Text_
- *${hrmn} ${prefix}multicolor3d* _Text_
- *${hrmn} ${prefix}watercolor* _Text_
- *${hrmn} ${prefix}luxurygold* _Text_
- *${hrmn} ${prefix}galaxywallpaper* _Text_
- *${hrmn} ${prefix}lighttext* _Text_
- *${hrmn} ${prefix}beautifulflower* _Text_
- *${hrmn} ${prefix}puppycute* _Text_
- *${hrmn} ${prefix}royaltext* _Text_
- *${hrmn} ${prefix}heartshaped* _Text_
- *${hrmn} ${prefix}birthdaycake* _Text_
- *${hrmn} ${prefix}galaxystyle* _Text_
- *${hrmn} ${prefix}hologram3d* _Text_
- *${hrmn} ${prefix}greenneon* _Text_
- *${hrmn} ${prefix}glossychrome* _Text_
- *${hrmn} ${prefix}greenbush* _Text_
- *${hrmn} ${prefix}metallogo* _Text_
- *${hrmn} ${prefix}noeltext* _Text_
- *${hrmn} ${prefix}glittergold* _Text_
- *${hrmn} ${prefix}textcake* _Text_
- *${hrmn} ${prefix}starsnight* _Text_
- *${hrmn} ${prefix}wooden3d* _Text_
- *${hrmn} ${prefix}textbyname* _Text_
- *${hrmn} ${prefix}writegalacy* _Text_
- *${hrmn} ${prefix}galaxybat* _Text_
- *${hrmn} ${prefix}snow3d* _Text_
- *${hrmn} ${prefix}birthdayday* _Text_
- *${hrmn} ${prefix}goldplaybutton* _Text_
- *${hrmn} ${prefix}silverplaybutton* _Text_
- *${hrmn} ${prefix}freefire* _Text_
+ *${hrmn} ${prefix}wetglass*
+ *${hrmn} ${prefix}multicolor3d*
+ *${hrmn} ${prefix}watercolor*
+ *${hrmn} ${prefix}luxurygold*
+ *${hrmn} ${prefix}galaxywallpaper*
+ *${hrmn} ${prefix}lighttext*
+ *${hrmn} ${prefix}beautifulflower*
+ *${hrmn} ${prefix}puppycute*
+ *${hrmn} ${prefix}royaltext*
+ *${hrmn} ${prefix}heartshaped*
+ *${hrmn} ${prefix}birthdaycake*
+ *${hrmn} ${prefix}galaxystyle*
+ *${hrmn} ${prefix}hologram3d*
+ *${hrmn} ${prefix}greenneon*
+ *${hrmn} ${prefix}glossychrome*
+ *${hrmn} ${prefix}greenbush*
+ *${hrmn} ${prefix}metallogo*
+ *${hrmn} ${prefix}noeltext*
+ *${hrmn} ${prefix}glittergold*
+ *${hrmn} ${prefix}textcake*
+ *${hrmn} ${prefix}starsnight*
+ *${hrmn} ${prefix}wooden3d*
+ *${hrmn} ${prefix}textbyname*
+ *${hrmn} ${prefix}writegalacy*
+ *${hrmn} ${prefix}galaxybat*
+ *${hrmn} ${prefix}snow3d*
+ *${hrmn} ${prefix}birthdayday*
+ *${hrmn} ${prefix}goldplaybutton*
+ *${hrmn} ${prefix}silverplaybutton*
+ *${hrmn} ${prefix}freefire*
  
  *𖨠Rondom Nsfw*
  *${hrmn} ${prefix}chiisaihentai*
@@ -753,6 +745,7 @@ ${readMore}
  *${hrmn} ${prefix}blowjob*
  *${hrmn} ${prefix}yaoi*
  *${hrmn} ${prefix}ecchi*
+ *${hrmn} ${prefix}ahegao*
  *${hrmn} ${prefix}hololewd*
  *${hrmn} ${prefix}sideoppai*
  *${hrmn} ${prefix}animefeets*
@@ -767,76 +760,60 @@ ${readMore}
  *${hrmn} ${prefix}hentai4everyone*
  
  *𖨠Photo Oxy*
- *${hrmn} ${prefix}shadow* _Text_
- *${hrmn} ${prefix}cup* _Text_
- *${hrmn} ${prefix}cup1* _Text_
- *${hrmn} ${prefix}romance* _Text_
- *${hrmn} ${prefix}smoke* _Text_
- *${hrmn} ${prefix}burnpaper* _Text_
- *${hrmn} ${prefix}lovemessage* _Text_
- *${hrmn} ${prefix}undergrass* _Text_
- *${hrmn} ${prefix}love* _Text_
- *${hrmn} ${prefix}coffe* _Text_
- *${hrmn} ${prefix}woodheart* _Text_
- *${hrmn} ${prefix}woodenboard* _Text_
- *${hrmn} ${prefix}summer3d* _Text_
- *${hrmn} ${prefix}wolfmetal* _Text_
- *${hrmn} ${prefix}nature3d* _Text_
- *${hrmn} ${prefix}underwater* _Text_
- *${hrmn} ${prefix}golderrose* _Text_
- *${hrmn} ${prefix}summernature* _Text_
- *${hrmn} ${prefix}letterleaves* _Text_
- *${hrmn} ${prefix}glowingneon* _Text_
- *${hrmn} ${prefix}fallleaves* _Text_
- *${hrmn} ${prefix}flamming* _Text_
- *${hrmn} ${prefix}harrypotter* _Text_
- *${hrmn} ${prefix}carvedwood* _Text_
+ *${hrmn} ${prefix}shadow*
+ *${hrmn} ${prefix}cup*
+ *${hrmn} ${prefix}cup1*
+ *${hrmn} ${prefix}romance*
+ *${hrmn} ${prefix}smoke*
+ *${hrmn} ${prefix}burnpaper*
+ *${hrmn} ${prefix}lovemessage*
+ *${hrmn} ${prefix}undergrass*
+ *${hrmn} ${prefix}love*
+ *${hrmn} ${prefix}coffe*
+ *${hrmn} ${prefix}woodheart*
+ *${hrmn} ${prefix}woodenboard*
+ *${hrmn} ${prefix}summer3d*
+ *${hrmn} ${prefix}wolfmetal*
+ *${hrmn} ${prefix}nature3d*
+ *${hrmn} ${prefix}underwater*
+ *${hrmn} ${prefix}golderrose*
+ *${hrmn} ${prefix}summernature*
+ *${hrmn} ${prefix}letterleaves*
+ *${hrmn} ${prefix}glowingneon*
+ *${hrmn} ${prefix}fallleaves*
+ *${hrmn} ${prefix}flamming*
+ *${hrmn} ${prefix}harrypotter*
+ *${hrmn} ${prefix}carvedwood*
  
  *𖨠Dowloader*
-  *${hrmn} ${prefix}ytplay* _Text Lagu_
-  *${hrmn} ${prefix}ytsearch* _Text Lagu_
-  *${hrmn} ${prefix}ytmp3* _Text Lagu_
-  *${hrmn} ${prefix}ytmp4* _Text Lagu_
-  *${hrmn} ${prefix}fbdl* _Url_
-  *${hrmn} ${prefix}twdl* _Url_
-  *${hrmn} ${prefix}mediafire* _Url_
-  *${hrmn} ${prefix}igdl* _Url_
-  *${hrmn} ${prefix}ttnowm* _Url_
-  *${hrmn} ${prefix}ttmp3* _Url_
+  *${hrmn} ${prefix}play*
+  *${hrmn} ${prefix}fb*
+  *${hrmn} ${prefix}twitter*
+  *${hrmn} ${prefix}mediafire*
+  *${hrmn} ${prefix}ig*
+  *${hrmn} ${prefix}ytmp3*
+  *${hrmn} ${prefix}ytmp4*
 
 *𖨠Wibu*
   *${hrmn} ${prefix}waifu*
   *${hrmn} ${prefix}loli*
   *${hrmn} ${prefix}neko*
   *${hrmn} ${prefix}husbu*
-  *${hrmn} ${prefix}elf*
-  *${hrmn} ${prefix}exo*
-  *${hrmn} ${prefix}shota*
+  *${hrmn} ${prefix}milf*
+  *${hrmn} ${prefix}cosplay*
+  *${hrmn} ${prefix}wallml*
   *${hrmn} ${prefix}kanna*
   *${hrmn} ${prefix}sagiri*
   *${hrmn} ${prefix}megumin*
   *${hrmn} ${prefix}wallnime*
-  
-*│➸18+*
-  *_Fitur Ini Khusus Premium!_*
-  *${hrmn} ${prefix}nhentai* _Url_
-  *${hrmn} ${prefix}nhentaisearch* _Url_
-  *${hrmn} ${prefix}nekopoisearch* _Url_
-  *${hrmn} ${prefix}nhentaipdf* _Url_
-  *${hrmn} ${prefix}xnxxsearch* _Link/Url_
-  *${hrmn} ${prefix}xhamstersearch* _Link/Url_
-  
- │❏ *_Jangan Lupa Donasi Ya😊_*
- │❏ *Sudah Di Kasih Free Jadi Harus Tau Aturan!*
- │❏ _© Created By NekellH4xor🔥_
 `;
        const sendButtonsLoc = (from, title, text, desc, button, msg, men, file) => {
             return herman.SendButtonsLoc(from, {"text": '',"contentText": title + '\n' + text,"footerText": desc, "buttons": button, "headerType": "LOCATION", "locationMessage": { "degreesLongitude": "", "degreesLatitude": "", "jpegThumbnail": file}}, MessageType.buttonsMessage, { quoted: fvideo, contextInfo: {"mentionedJid": men ? men : []}})
         }
-        sendButtonMsg(menu, `runtime: ${runtime(process.uptime())}\nFacebook : Nekell Ganss`,[{
-          buttonId: `${prefix}fb`,
+        sendButtonMsg(menu, `runtime: ${runtime(process.uptime())}\nSubscribe Herman Chanel`,[{
+          buttonId: `${prefix}yt`,
           buttonText: {
-            displayText: "FACEBOOK ☘️"
+            displayText: "YOUTUBE ☘️"
           },
           type: 1
             },{
@@ -855,21 +832,21 @@ ${readMore}
       } else if (listbut == "donasi") {
         const donate = `
 *❏ Donate Pages*
-├ *DANA : 089695073357*
+├ *gopay* :083146208804
 `
         herman.sendMessage(from, fs.readFileSync("./lib/image/donasi.jpeg"), image, {quoted: fvideo, caption:donate})
               } else if (listbut == "github") {
         const donate = `
 *❏ Donate Pages*
-├ *Base By* : NekellH4xor
+├ *Base By* : Herman Chanel
 `
         herman.sendMessage(from, fs.readFileSync("./lib/image/fake.jpeg"), image, {quoted: fvideo, caption:donate})
       } else if (listbut == "sosial media") {
         const medsos = `
 *❏ Sosial Media*
-├ *github* : http://github.com/IamNekell404
-├ *Wa* : https://wa.me/6289695073357
-└ *Fb* : https://facebook.com/nekellganss
+├ *github* : http://github.com/Hermanchanel
+├ *Wa* : https://wa.me/6283146208804
+└ *Yt* : https://youtube.com/channel/UCPhU6uA_3gUaEvyrFZFgJqg
 `
         herman.sendMessage(from, fs.readFileSync("./lib/image/medsos.jpeg"), image, {quoted: fvideo, caption: medsos})
       }   
@@ -923,120 +900,170 @@ ${readMore}
 						reply('Suksess broadcast')
 					}
 					break
-/////////(DOWNLOAD)///////////(Nekell H4xor)//////////
-case 'ytplay':
-                    if (args.length == 0) return await reply(`Example: ${prefix + command} jika nanti ku tak di samping mu`)
-                    await fetchJson(`https://api.lolhuman.xyz/api/ytsearch?apikey=${apikey}&query=${args.join(" ")}`).then(async(result) => {
-                     await fetchJson(`https://api.lolhuman.xyz/api/ytaudio2?apikey=${apikey}&url=https://www.youtube.com/watch?v=${result.result[0].videoId}`).then(async(result) => {
-                                    result = result.result
-                                    caption = `❖ Title    : *${result.title}*\n`
-                                    caption += `❖ Size     : *${result.size}*`
-                                    ini_buffer = await getBuffer(result.thumbnail)
-                                    await herman.sendMessage(from, ini_buffer, image, { quoted: lol, caption: caption })
-                                    get_audio = await getBuffer(result.link)
-                                    await herman.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${result.title}.mp3`, quoted: lol })
-                                })
-                        })
-                    break
-                case 'ytsearch':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} Melukis Senja`)
-                    query = args.join(" ")
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/ytsearch?apikey=${apikey}&query=${query}`)
-                    get_result = get_result.result
-                    ini_txt = ""
-                    for (var x of get_result) {
-                        ini_txt += `Title : ${x.title}\n`
-                        ini_txt += `Views : ${x.views}\n`
-                        ini_txt += `Published : ${x.published}\n`
-                        ini_txt += `Thumbnail : ${x.thumbnail}\n`
-                        ini_txt += `Link : https://www.youtube.com/watch?v=${x.videoId}\n\n`
-                    }
-                    reply(ini_txt)
-                    break
-                case 'ytmp3':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} https://www.youtube.com/watch?v=qZIQAk-BUEc`)
-                    ini_link = args[0]
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/ytaudio2?apikey=${apikey}&url=${ini_link}`)
-                    get_result = get_result.result
-                    caption = `❖ Title    : *${result.title}*\n`
-                    caption += `❖ Size     : *${result.size}*`
-                    ini_buffer = await getBuffer(get_result.thumbnail)
-                    await herman.sendMessage(from, ini_buffer, image, { quoted: lol, caption: ini_txt })
-                    get_audio = await getBuffer(get_result.link)
-                    await herman.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_result.title}.mp3`, quoted: lol })
-                    break
-                case 'ytmp4':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} https://www.youtube.com/watch?v=qZIQAk-BUEc`)
-                    ini_link = args[0]
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/ytvideo2?apikey=${apikey}&url=${ini_link}`)
-                    get_result = get_result.result
-                    ini_txt = `${get_result.title} - ${get_result.size}`
-                    ini_buffer = await getBuffer(get_result.thumbnail)
-                    await herman.sendMessage(from, ini_buffer, image, { quoted: lol, caption: ini_txt })
-                    get_audio = await getBuffer(get_result.link)
-                    await herman.sendMessage(from, get_audio, video, { mimetype: 'video/mp4', filename: `${get_result.title}.mp4`, quoted: lol })
-break             
-//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Nekell H4xor)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
-case 'igdl':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} https://www.instagram.com/p/CJ8XKFmJ4al/?igshid=1acpcqo44kgkn`)
-                    ini_url = args[0]
-                    ini_url = await fetchJson(`https://api.lolhuman.xyz/api/instagram?apikey=${apikey}&url=${ini_url}`)
-                    ini_url = ini_url.result
-                    ini_type = image
-                    if (ini_url.includes(".mp4")) ini_type = video
-                    ini_buffer = await getBuffer(ini_url)
-                    await herman.sendMessage(from, ini_buffer, ini_type, { quoted: mek })
-                    break
-                case 'igdl2':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} https://www.instagram.com/p/CJ8XKFmJ4al/?igshid=1acpcqo44kgkn`)
-                    ini_url = args[0]
-                    ini_url = await fetchJson(`https://api.lolhuman.xyz/api/instagram2?apikey=${apikey}&url=${ini_url}`)
-                    ini_result = ini_url.result.media
-                    for (var x of ini_result) {
-                        ini_type = image
-                        if (x.includes(".mp4")) ini_type = video
-                        ini_buffer = await getBuffer(x)
-                        await herman.sendMessage(from, ini_buffer, ini_type, { quoted: mek })
-                    }
-                    break
-                case 'twtdl':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} https://twitter.com/gofoodindonesia/status/1229369819511709697`)
-                    ini_url = args[0]
-                    ini_url = await fetchJson(`https://api.lolhuman.xyz/api/twitter?apikey=${apikey}&url=${ini_url}`)
-                    ini_url = ini_url.result
-                    ini_url = ini_url[ini_url.length - 1].link
-                    ini_buffer = await getBuffer(ini_url)
-                    await herman.sendMessage(from, ini_buffer, video, { quoted: lol })
-                    break
-                case 'fbdl':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} https://id-id.facebook.com/SamsungGulf/videos/video-bokeh/561108457758458/`)
-                    ini_url = args[0]
-                    ini_url = await fetchJson(`https://api.lolhuman.xyz/api/facebook?apikey=${apikey}&url=${ini_url}`)
-                    ini_url = ini_url.result[0].link
-                    ini_buffer = await getBuffer(ini_url)
-                    await herman.sendMessage(from, ini_buffer, video, { quoted: mek })
+/////////(DOWNLOAD)///////////(Herman Chanel)//////////
+case 'play':
+if (args.length == 0) return await reply(`Masukin Judul Lagunya\nContoh : ${prefix + command} Aku Bukan Jodohnya`)
+teks =
+`Silahkan Pilih Tipe File Yg Mau Di Download`
+but = [
+{ buttonId: `lagu ${q}`, buttonText: { displayText: '🎵 MUSIC' }, type: 1 },
+{ buttonId: `video ${q}`, buttonText: { displayText: '🎥 VIDEO' }, type: 1 }
+]
+return herman.SendButtonsLoc(from, teks, ftrol, but)
 break
+case 'lagu':
+if (args.length < 1) return reply('Masukin Judul Lagunya')
+teks = args.join(' ')
+reply(mess.wait)
+if (!teks.endsWith("-doc")){
+res = await yts(`${teks}`).catch(e => {
+reply('_[ ! ] Error Query Yang Anda Masukan Tidak Ada_')
+})
+reply(` Playing ${res.all[0].title}`)
+let thumbInfo = ` *Youtube Search*
+• *Judul :* ${res.all[0].title}
+• *ID Video :* ${res.all[0].videoId}
+• *Diupload Pada :* ${res.all[0].ago}
+• *Views :* ${res.all[0].views}
+• *Durasi :* ${res.all[0].timestamp}
+• *Channel :* ${res.all[0].author.name}
+• *Link Channel :* ${res.all[0].author.url}
+
+*_Tunggu Proses Upload....._*
+`
+res = await y2mateA(res.all[0].url).catch(e => {
+reply('_[ ! ] Error Saat Memasuki Web Y2mate_')
+})
+sendFileFromUrl(res[0].link, audio, {quoted: zer, mimetype: 'audio/mp4', filename: res[0].output})
+}
+if (teks.endsWith("-doc")){
+var tec = teks.split("-doc")
+res = await yts(`${tec}`).catch(e => {
+reply('_[ ! ] Error Query Yang Anda Masukan Tidak Ada_')
+})
+reply(`.Playing ${res.all[0].title}`)
+let thumbInfo = `*${botname}* 
+• *Judul :* ${res.all[0].title}
+• *ID Video :* ${res.all[0].videoId}
+• *Diupload Pada :* ${res.all[0].ago}
+• *Views :* ${res.all[0].views}
+• *Durasi :* ${res.all[0].timestamp}
+• *Channel :* ${res.all[0].author.name}
+• *Link Channel :* ${res.all[0].author.url}
+
+*_Tunggu Proses Upload....._*
+`
+sendFileFromUrl(res.all[0].image, image, {quoted: zer, caption: thumbInfo})
+res = await y2mateA(res.all[0].url).catch(e => {
+reply('_[ ! ] Error Saat Memasuki Web Y2mate_')
+})
+sendFileFromUrl(res[0].link, document, {quoted: zer, mimetype: 'audio/mp3', filename: res[0].output})
+}
+break
+case "video":
+if (args.length === 0)
+return reply(`Masukin Judul Lagunya ?\nContoh: ${prefix + command} Aku Bukan Jodohnya`)
+reply(mess.wait)
+var srch = args.join("")
+aramas = await yts(srch)
+aramat = aramas.all;
+var mulaikah = aramat[0].url;
+try {
+ytv(mulaikah).then((res) => {
+var { dl_link, thumb, title, filesizeF, filesize } = res;
+axios
+.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
+.then(async (a) => {
+if (Number(filesize) >= 100000)
+return sendMediaURL(from,thumb,`*PLAY VIDEO*\n\n*Title* : ${title}\n*Ext* : MP3\n*Filesize* : ${filesizeF}\n*Link* : ${a.data}\n\n_Untuk durasi lebih dari batas disajikan dalam bentuk link_`)
+var captions = `*PLAY VIDEO*\n\n*Title* : ${title}\n*Ext* : MP4\n*Size* : ${filesizeF}\n*Link* : ${a.data}\n\n_Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
+sendMediaURL(from, thumb, captions)
+await sendMediaURL(from, dl_link).catch(() => reply("error"))
+})
+})
+} catch (err) {
+reply(mess.error.api)
+}
+break
+case 'ytmp3':
+if (args.length === 0) return reply(`Link Nya Mana ?\nContoh: ${prefix + command} https://www.youtube.com/watch?v=qZIQAk-BUEc`)
+let isLinks = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
+if (!isLinks) return reply('Eror')
+var srch = args.join(' ')
+try {
+yta(srch)
+.then((res) => {
+var { dl_link, thumb, title, filesizeF, filesize } = res
+axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
+.then(async (a) => {
+if (Number(filesize) >= 100000) return sendMediaURL(from, thumb, `*PLAY MUSIC*\n\n*Title* : ${title}\n*Ext* : MP3\n*Filesize* : ${filesizeF}\n*Link* : ${a.data}\n\n_Untuk durasi lebih dari batas disajikan dalam bentuk link_`)
+var captions = `🎧 *PLAY MUSIC*\n\n*Title* : ${title}\n*Ext* : MP3\n*Size* : ${filesizeF}\n*Link* : ${a.data}\n\n_Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
+await sendMediaURL(from, thumb, captions)
+sendMediaURL(from, dl_link).catch(() => reply('error'))
+}) 
+})
+} catch (err) {
+reply('Terjadi kesalahan')
+}
+break
+case 'ytmp4':
+if (args.length == 0) return reply(`Link Nya Mana ?\nContoh: ${prefix + command} https://www.youtube.com/watch?v=qZIQAk-BUEc`)
+ini_link = args[0]
+get_result = await fetchJson(`https://api.lolhuman.xyz/api/ytvideo2?apikey=${apikey1}&url=${ini_link}`)
+get_result = get_result.result
+ini_txt = `${get_result.title} - ${get_result.size}`
+ini_buffer = await getBuffer(get_result.thumbnail)
+await herman.sendMessage(from, ini_buffer, image, { quoted: ftrol, caption: ini_txt })
+get_audio = await getBuffer(get_result.link)
+await herman.sendMessage(from, get_audio, video, { mimetype: 'video/mp4', filename: `${get_result.title}.mp4`, quoted: ftrol, caption: 'Nih Jangan Lupa Subscribe herman YT7'})
+break             
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Herman Chanel)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
+          case 'fb':
+          case 'facebook':
+              if (!q) return reply('Link Nya?')
+              reply(mess.wait)
+              data = await fetchJson(`https://api.lolhuman.xyz/api/facebook?apikey=${setting.lolkey}&url=${args[0]}`)
+              ini_video = await getBuffer(data.result)
+              herman.sendMessage(from, ini_video, video, { quoted: mek })
+              break
+case 'mediafire':
+              if (args.length < 1) return reply('Link Nya Mana? ')
+              if(!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error.Iv)
+              teks = args.join(' ')
+              res = await mediafireDl(teks)
+              result = `*MediaFire Downloader*
+               
+🍁 Nama : ${res[0].nama}
+🍁 Ukuran : ${res[0].size}
+🍁 Link : ${res[0].link}
+
+_*Tunggu Proses Upload Media......*_`
+              reply(result)
+              sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
+              break
+case 'twitter':
+              if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(mess.Iv)
+              if (!q) return reply('Linknya?')
+              ten = args[0]
+              var res = await twitterGetUrl(`${ten}`)
+             .then(g => {
+              ren = `${g.download[2].url}`
+              sendMediaURL(from,ren,'Done')
+})
+              break
+case 'ytdesc':
+              if (args.length < 1) return reply('Video/Link Yt Nya Mana? ')
+              teks = args.join(' ')
+              res = await yts(teks)
+              reply(res.all[0].description)
+              break
 case "tag":
 			if (args.length < 1) return reply(`Penggunaan ${prefix}tag 62xnxx`)
             var nomqm = `${body.slice(5)}@s.whatsapp.net`
 					tagq = `@${nomqm.split('@')[0]}` 
 					herman.sendMessage(from, tagq, text, { quoted: ftrol, contextInfo: { forwardingScore: 508, isForwarded: true, mentionedJid: [nomqm]}})
 			break
-case 'tiktoknowm':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} https://vt.tiktok.com/ZSwWCk5o/`)
-                    ini_url = args[0]
-                    ini_url = `https://api.lolhuman.xyz/api/tiktok?apikey=${apikey}&url=${ini_url}`
-                    get_result = await fetchJson(ini_url)
-                    ini_buffer = await getBuffer(get_result.result.link)
-                    await herman.sendMessage(from, ini_buffer, video, { quoted: mek })
-                    break
-                case 'tiktokmusic':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} https://vt.tiktok.com/ZSwWCk5o/`)
-                    ini_link = args[0]
-                    get_audio = await getBuffer(`https://api.lolhuman.xyz/api/tiktokmusic?apikey=${apikey}&url=${ini_link}`)
-                    await herman.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
-                    break
-//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Nekell H4xor)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Herman Chanel)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
 			case 'tagme':
                   var nomqm = mek.participant
 				    tagu = `@${nomqm.split('@s.whatsapp.net')[0]}`
@@ -1052,7 +1079,7 @@ case 'tiktoknowm':
 						no += 1
 						teks += `[${no.toString()}] @${hehehe.split('@')[0]}\n`
 					}
-					teks += `│+ Total Pengguna : ${user.length}\n╰──────⎿ *CORNFAKE BOTZ* ⏋────`
+					teks += `│+ Total Pengguna : ${user.length}\n╰──────⎿ *HERMAN BOTZ* ⏋────`
 					herman.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": user}})
 					break
 case 'sticktag':
@@ -1082,7 +1109,7 @@ case 'sticktag':
 					me = herman.user
 					user.push(sender)
 					uptime = process.uptime()
-					teks = `➽ *ɴᴀᴍᴀ ʙᴏᴛ* : ${me.name}\n➽ *ᴏᴡɴᴇʀ ʙᴏᴛ* : Hermansyah\n➽ *ᴘʀᴇғɪx* : | ${prefix} |\n\n➽ *ᴀᴋᴛɪғ ꜱᴇᴊᴀᴋ* :${runtime(process.uptime)}\n➽ *ᴛᴏᴛᴀʟ ᴘᴇɴɢɢᴜɴᴀ* : ${user.length} ᴜꜱᴇʀ\n➽\n*ꜱᴘᴇᴄɪᴀʟ ᴛʜᴀɴᴋꜱ ᴛᴏ* :\n➽ ALL MY FRIENDS`
+					teks = `➽ *ɴᴀᴍᴀ ʙᴏᴛ* : ${me.name}\n➽ *ᴏᴡɴᴇʀ ʙᴏᴛ* : Hermansyah\n➽ *ᴘʀᴇғɪx* : | ${prefix} |\n\n➽ *ᴀᴋᴛɪғ ꜱᴇᴊᴀᴋ* :${runtime(process.uptime)}\n➽ *ᴛᴏᴛᴀʟ ᴘᴇɴɢɢᴜɴᴀ* : ${user.length} ᴜꜱᴇʀ\n➽\n*ꜱᴘᴇᴄɪᴀʟ ᴛʜᴀɴᴋꜱ ᴛᴏ* :\n➽ ᴀʟʟᴀʜ ꜱᴡᴛ\n➽ ғxᴄ7\n➽ ᴍʜᴀɴᴋʙᴀʀʙᴀʀ\n➽ ᴀɴᴋᴇʀ\n➽Affis junianto\n➽ Angga\n➽ Herman Chanel`
 					const daca = fs.readFileSync('lord.jpg');
 				    herman.sendMessage(from, daca, image, {quoted: fvideo, caption: teks})
 					break 
@@ -1129,7 +1156,7 @@ case 'report': // jan di ganti anjeng emang lu bisa fix bug?
                          text: tekst1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    herman.sendMessage('6289695073357@s.whatsapp.net', options, text, {quoted: mek})
+                    herman.sendMessage('6283146208804@s.whatsapp.net', options, text, {quoted: mek})
                     reply('Masalah telah di laporkan ke owner BOT, laporan palsu/main2 tidak akan ditanggapi.')
                     break
           case 'hidetag':
@@ -1205,16 +1232,19 @@ break
           case 'waifu':
           case 'loli':
           case 'husbu':
-          case 'elf':
-          case 'neko':
-          case 'shota':
-          case 'exo':
-          case 'bts':
-          case 'art':
-          case 'shinobu':
-              getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${apikey}`).then((gambar) => {
-                        herman.sendMessage(from, gambar, image, { quoted: mek })
-                    })
+          case 'milf':
+          case 'cosplay':
+          case 'wallml':
+              let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
+              let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
+              fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
+		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `🐲Next`},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'🍁OWNER'},type:1}]
+              imageMsg = ( await herman.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
+              buttonsMessage = {footerText:'Tetaplah Bahagia', imageMessage: imageMsg,
+              contentText:`YT Herman Chanel`,buttons,headerType:4}
+              prep = await agam.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+              herman.relayWAMessage(prep)
+              fs.unlinkSync(`./${sender}.jpeg`)
               break
           case 'tourl':
     if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedVideo ) && args.length == 0) {
@@ -1237,7 +1267,7 @@ break
           reply(`Key : ${input[0]}\nRespon : ${input[1]}\n\nRespon berhasil di set`)
     break
 case 'neko': 
-ini_result = await fetchJson(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${apikey}`)
+ini_result = await fetchJson(`https://xnxxapi.herokuapp.com/api/nsfw/nsfwNeko?apikey=xnxx`)
 get_result = ini_result.result
 ini_img = await getBuffer(get_result)
 herman.sendMessage(from, ini_img, image, {quoted:ftrol})
@@ -1277,71 +1307,41 @@ case 'patrick':
 	} else {
 	  reply('Foto Nya Mana anjim 🗿')
 	}
-break
-case 'ttp':
-                case 'ttp2':
-                case 'ttp3':
-                case 'ttp4':
-                case 'attp':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} Nekell H4xor`)
-                    ini_txt = args.join(" ")
-                    ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${apikey}&text=${ini_txt}`)
-                    await herman.sendMessage(from, ini_buffer, sticker, { quoted: mek })
+	break
+case 'attp':
+if (args.length == 0) return reply(`Example: ${prefix + command} Hai`)
+buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
+herman.sendMessage(from, buffer, sticker, { quoted: mek })
 break
 case 'toimg':
-if (!isQuotedSticker) return reply('𝗥𝗲𝗽𝗹𝘆/𝘁𝗮𝗴 𝘀𝘁𝗶𝗰𝗸𝗲𝗿 !')
-sticWait(from)
-encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-media = await Lexxy.downloadAndSaveMediaMessage(encmedia)
+if (!isQuotedSticker) return reply('Reply Stickernya')
+encmedia = JSON.parse(JSON.stringify(zer).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+media = await herman.downloadAndSaveMediaMessage(encmedia, './storage/media_user')
 ran = getRandom('.png')
 exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 fs.unlinkSync(media)
-if (err) return reply('Yah gagal, coba ulangi ^_^')
+if (err) return reply('Gagal, Pada Saat Mengkonversi Sticker Ke Gambar ')
 buffer = fs.readFileSync(ran)
-fakethumb(buffer,'By Nekell H4xor')
+costum(buffer, image, Verived, `Jangan Lupa Subscribe Herman Chanel`)
 fs.unlinkSync(ran)
 })
 break
-case 'telesticker':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
-                    ini_url = args[0]
-                    ini_url = await fetchJson(`https://api.lolhuman.xyz/api/telestick?apikey=${apikey}&url=${ini_url}`)
-                    ini_sticker = ini_url.result.sticker
-                    for (sticker_ in ini_sticker) {
-                        ini_buffer = await getBuffer(ini_sticker[sticker_])
-                        await herman.sendMessage(from, ini_buffer, sticker)
-                    }
-break
-//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Nekell H4xor)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
-               case 'takestick':
-                    if ((isMedia && !herman.message.videoMessage || isQuotedSticker)) {
-                        if (args.length == 0) return reply(`Example: ${prefix + command} Nekell|H4xor`)
-                        const encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(lol).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : lol
-                        filePath = await herman.downloadAndSaveMediaMessage(encmedia, filename = getRandom());
-                        file_name = getRandom(".webp")
-                        ini_txt = args.join(" ").split("|")
-                        request({
-                            url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=${apikey}`,
-                            method: 'POST',
-                            formData: {
-                                "img": fs.createReadStream(filePath),
-                                "package": ini_txt[0],
-                                "author": ini_txt[1]
-                            },
-                            encoding: "binary"
-                        }, function(error, response, body) {
-                            fs.unlinkSync(filePath)
-                            fs.writeFileSync(file_name, body, "binary")
-                            ini_buff = fs.readFileSync(file_name)
-                            herman.sendMessage(from, ini_buff, sticker, { quoted: mek }).then(() => {
-                                fs.unlinkSync(file_name)
-                            })
-                        });
-                    } else {
-                        reply(`Tag sticker yang sudah dikirim`)
-                    }
-break
-case 'wetglass':
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Herman Chanel)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
+               case 'smeme':
+             if(!c) return reply(`Example :Reply sticker dengan Caption${prefix + command} herman` )
+             if (mek.message.extendedTextMessage != undefined || mek.message.extendedTextMessage != null) {
+             ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+             reply(mess.wait)
+             owgi = await herman.downloadMediaMessage(ger)
+             await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
+             var imgbb = require('imgbb-uploader')
+             anu = await imgbb("0ffc503f79f9b051b82e643eb3e3a746", './stickmeme.jpeg')
+             teks = `${anu.display_url}`
+             sendStickerUrl(from, `https://cililitan.herokuapp.com/api/memegen1?teks=${c}&img_url=${teks}`, mek)
+             fs.unlinkSync('./stickmeme.jpeg')
+             }
+             break
+case 'wetglass'://Herman Chanel
                 case 'multicolor3d':
                 case 'watercolor':
                 case 'luxurygold':
@@ -1372,22 +1372,29 @@ case 'wetglass':
                 case 'silverplaybutton':
                 case 'freefire':
 		
-                    if (args.length == 0) return reply(`Example: ${prefix + command} nekell h4xor`)
+                    if (args.length == 0) return reply(`Example: ${prefix + command} herman chanel`)
                     ini_txt = args.join(" ")
-                    ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/${command}?apikey=${apikey}&text=${ini_txt}`)
+                    ini_buffer = await getBuffer(`http://api.lolhuman.xyz/api/ephoto1/${command}?apikey=${lolkey}&text=${ini_txt}`)
                     herman.sendMessage(from, ini_buffer, image, { quoted: mek})
                     break
 case 'kanna':
 case 'sagiri':
 case 'megumin':
 case 'wallnime':
-getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${apikey}`).then((gambar) => {
-                        lolhuman.sendMessage(from, gambar, image, { quoted: lol })
-                    })
-break 
-case 'hentai':
-case 'hentaigif': 		
-ini_result = await fetchJson(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${apikey}`)
+reply(mess.wait)
+buff = await getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${apikey1}`)
+buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
+imageMsg = (await herman.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
+buttonsMessage = {footerText:'©Created By herman Chanel', imageMessage: imageMsg,
+contentText:`Done ✓ Subscribe Herman Chanel`,buttons,headerType:4}
+prep = await herman.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+herman.relayWAMessage(prep)
+break
+case 'ass': 
+case 'ahegao': 
+case 'yuri': 
+case 'panties': 		
+ini_result = await fetchJson(`https://xnxxapi.herokuapp.com/api/nsfw/${command}?apikey=xnxx`)
 get_result = ini_result.result
 ini_img = await getBuffer(get_result)
 herman.sendMessage(from, ini_img, image, {quoted:ftrol, thumbnail: Buffer.alloc(0)})
@@ -1410,9 +1417,13 @@ case 'lewdanimegirls':
 case 'biganimetiddies':
 case 'animebellybutton':
 case 'hentai4everyone':
-   await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${apikey}`).then((gambar) => {
-                        herman.sendMessage(from, gambar, image, { quoted: mek })
-                    })
+buff = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${apikey1}`)
+buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
+imageMsg = (await herman.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
+buttonsMessage = {footerText:'©Created By herman Chanel', imageMessage: imageMsg,
+contentText:`Done ✓ Subscribe Herman Chanel`,buttons,headerType:4}
+prep = await herman.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+herman.relayWAMessage(prep)
 break
 case 'bj':
 case 'ero':
@@ -1455,9 +1466,13 @@ case 'wallpaper':
 case 'pussy_jpg':
 case 'kemonomimi':
 case 'nsfw_avatar':
-getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${apikey}`).then((gambar) => {
-                        herman.sendMessage(from, gambar, image, { quoted: mek })
-                    })
+buff = await getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${apikey1}`)
+buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
+imageMsg = (await herman.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
+buttonsMessage = {footerText:'©Created By herman Chanel', imageMessage: imageMsg,
+contentText:`Done ✓ Subscribe Herman Chanel`,buttons,headerType:4}
+prep = await herman.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
+herman.relayWAMessage(prep)
 break
 case 'blackpink':
                 case 'neon':
@@ -1491,30 +1506,13 @@ case 'blackpink':
                 case 'summersand':
                 case 'horrorblood':
                 case 'thunder':
-if (args.length == 0) return reply(`Teksnya Mana ?\nContoh : ${prefix + command} nekell h4xor`)
+if (args.length == 0) return reply(`Teksnya Mana ?\nContoh : ${prefix + command} herman Chanel`)
 ini_txt = args.join(" ")
-getBuffer(`https://api.lolhuman.xyz/api/textprome/${command}?apikey=${apikey}&text=${ini_txt}`).then((gambar) => {
-herman.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Done ✓ Jangan Lupa Donasi Mekk`, quoted : ftrol})
+getBuffer(`http://api.lolhuman.xyz/api/textprome/${command}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
+herman.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Done ✓ Subscribe Herman Chanel`, quoted : ftrol})
 })
 break
-case 'pornhub':
-                case 'glitch':
-                case 'avenger':
-                case 'space':
-                case 'ninjalogo':
-                case 'marvelstudio':
-                case 'lionlogo':
-                case 'wolflogo':
-                case 'steel3d':
-                case 'wallgravity':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} Nekell H4xor`)
-                    txt1 = args[0]
-                    txt2 = args[1]
-                    getBuffer(`https://api.lolhuman.xyz/api/textprome2/${command}?apikey=${apikey}&text1=${txt1}&text2=${txt2}`).then((gambar) => {
-                        herman.sendMessage(from, gambar, image, { quoted: lol })
-                    })
-break
-case 'shadow':
+case 'shadow'://Herman Chanel
                 case 'cup':
                 case 'cup1':
                 case 'romance':
@@ -1538,159 +1536,11 @@ case 'shadow':
                 case 'flamming':
                 case 'harrypotter':
                 case 'carvedwood':
-                    if (args.length == 0) return reply(`Teksnya Mana ?\nContoh : ${prefix + command} nekell h4xor`)
+                    if (args.length == 0) return reply(`Teksnya Mana ?\nContoh : ${prefix + command} herman Chanel`)
 ini_txt = args.join(" ")
-getBuffer(`https://api.lolhuman.xyz/api/photooxy1/${command}?apikey=${apikey}&text=${ini_txt}`).then((gambar) => {
-herman.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Done Jangan Lupa Donasi`, quoted : ftrol})
+getBuffer(`http://api.lolhuman.xyz/api/photooxy1/${command}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
+herman.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Done Subscribe Herman Chanel`, quoted : ftrol})
 })
-break
-case 'nhentai':
-  if (isPrem) return reply(mess.only.premium)    
-  if (!isUser) return reply(mess.only.userB)
-  if (args.length == 0) return reply(`Example: ${prefix + command} 344253`)
-                    henid = args[0]
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentai/${henid}?apikey=${apikey}`)
-                    get_result = get_result.result
-                    ini_txt = `Title Romaji : ${get_result.title_romaji}\n`
-                    ini_txt += `Title Native : ${get_result.title_native}\n`
-                    ini_txt += `Read Online : ${get_result.read}\n`
-                    get_info = get_result.info
-                    ini_txt += `Parodies : ${get_info.parodies}\n`
-                    ini_txt += `Character : ${get_info.characters.join(", ")}\n`
-                    ini_txt += `Tags : ${get_info.tags.join(", ")}\n`
-                    ini_txt += `Artist : ${get_info.artists}\n`
-                    ini_txt += `Group : ${get_info.groups}\n`
-                    ini_txt += `Languager : ${get_info.languages.join(", ")}\n`
-                    ini_txt += `Categories : ${get_info.categories}\n`
-                    ini_txt += `Pages : ${get_info.pages}\n`
-                    ini_txt += `Uploaded : ${get_info.uploaded}\n`
-                    reply(ini_txt)
-break
-case 'nhentaipdf':
-  if (isPrem) return reply(mess.only.premium)    
-  if (!isUser) return reply(mess.only.userB)
-  if (args.length == 0) return reply(`Example: ${prefix + command} 344253`)
-                    henid = args[0]
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=${apikey}`)
-                    get_result = get_result.result
-                    ini_buffer = await getBuffer(get_result)
-                    await herman.sendMessage(from, ini_buffer, document, { quoted: mek, mimetype: Mimetype.pdf, filename: `${henid}.pdf` })
-break
-case 'nhentaisearch':
-  if (isPrem) return reply(mess.only.premium)    
-  if (!isUser) return reply(mess.only.userB)
-  if (args.length == 0) return reply(`Example: ${prefix + command} Gotoubun No Hanayome`)
-                    query = args.join(" ")
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaisearch?apikey=${apikey}&query=${query}`)
-                    get_result = get_result.result
-                    ini_txt = "Result : \n"
-                    for (var x of get_result) {
-                        ini_txt += `Id : ${x.id}\n`
-                        ini_txt += `Title English : ${x.title_english}\n`
-                        ini_txt += `Title Japanese : ${x.title_japanese}\n`
-                        ini_txt += `Native : ${x.title_native}\n`
-                        ini_txt += `Upload : ${x.date_upload}\n`
-                        ini_txt += `Page : ${x.page}\n`
-                        ini_txt += `Favourite : ${x.favourite}\n\n`
-                    }
-                    reply(ini_txt)
-break
-case 'nekopoisearch':
-  if (isPrem) return reply(mess.only.premium)    
-  if (!isUser) return reply(mess.only.userB)
-  if (args.length == 0) return reply(`Example: ${prefix + command} Isekai Harem`)
-                    query = args.join(" ")
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/nekopoisearch?apikey=${apikey}&query=${query}`)
-                    get_result = get_result.result
-                    ini_txt = ""
-                    for (var x of get_result) {
-                        ini_txt += `Title : ${x.title}\n`
-                        ini_txt += `Link : ${x.link}\n`
-                        ini_txt += `Thumbnail : ${x.thumbnail}\n\n`
-                    }
-                    reply(ini_txt)
-break
-case 'xhamstersearch':
-  if (isPrem) return reply(mess.only.premium)    
-  if (!isUser) return reply(mess.only.userB)
-  if (args.length == 0) return reply(`Example: ${prefix + command} Japanese`)
-                    query = args.join(" ")
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/${command}?apikey=${apikey}&query=${query}`)
-                    get_result = get_result.result
-                    ini_txt = ""
-                    for (var x of get_result) {
-                        ini_txt += `Title : ${x.title}\n`
-                        ini_txt += `Views : ${x.views}\n`
-                        ini_txt += `Duration : ${x.duration}\n`
-                        ini_txt += `Link : ${x.link}\n\n`
-                    }
-                    reply(ini_txt)
-break
-case 'xhamster':
-  if (isPrem) return reply(mess.only.premium)    
-  if (!isUser) return reply(mess.only.userB)
-  if (args.length == 0) return reply(`Example: ${prefix + command} https://xhamster.com/videos/party-with-friends-end-in-awesome-fucking-5798407`)
-                    query = args.join(" ")
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/${command}?apikey=${apikey}&url=${query}`)
-                    get_result = get_result.result
-                    ini_txt = `Title : ${get_result.title}\n`
-                    ini_txt += `Duration : ${get_result.duration}\n`
-                    ini_txt += `Uploader : ${get_result.author}\n`
-                    ini_txt += `Upload : ${get_result.upload}\n`
-                    ini_txt += `View : ${get_result.views}\n`
-                    ini_txt += `Rating : ${get_result.rating}\n`
-                    ini_txt += `Like : ${get_result.likes}\n`
-                    ini_txt += `Dislike : ${get_result.dislikes}\n`
-                    ini_txt += `Comment : ${get_result.comments}\n`
-                    ini_txt += "Link : \n"
-                    link = get_result.link
-                    for (var x of link) {
-                        ini_txt += `${x.type} - ${x.link}\n\n`
-                    }
-                    thumbnail = await getBuffer(get_result.thumbnail)
-                    await herman.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
-break
-case 'xnxxsearch':
-  if (isPrem) return reply(mess.only.premium)    
-  if (!isUser) return reply(mess.only.userB)
-  if (args.length == 0) return reply(`Example: ${prefix + command} Japanese`)
-                    query = args.join(" ")
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/${command}?apikey=${apikey}&query=${query}`)
-                    get_result = get_result.result
-                    ini_txt = ""
-                    for (var x of get_result) {
-                        ini_txt += `Title : ${x.title}\n`
-                        ini_txt += `Views : ${x.views}\n`
-                        ini_txt += `Duration : ${x.duration}\n`
-                        ini_txt += `Uploader : ${x.uploader}\n`
-                        ini_txt += `Link : ${x.link}\n`
-                        ini_txt += `Thumbnail : ${x.thumbnail}\n\n`
-                    }
-                    reply(ini_txt)
-break
-case 'xnxx':
-  if (isPrem) return reply(mess.only.premium)    
-  if (!isUser) return reply(mess.only.userB)
-  if (args.length == 0) return reply(`Example: ${prefix + command} https://www.xnxx.com/video-uy5a73b/mom_is_horny_-_brooklyn`)
-                    query = args.join(" ")
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/${command}?apikey=${apikey}&url=${query}`)
-                    get_result = get_result.result
-                    ini_txt = `Title : ${get_result.title}\n`
-                    ini_txt += `Duration : ${get_result.duration}\n`
-                    ini_txt += `View : ${get_result.view}\n`
-                    ini_txt += `Rating : ${get_result.rating}\n`
-                    ini_txt += `Like : ${get_result.like}\n`
-                    ini_txt += `Dislike : ${get_result.dislike}\n`
-                    ini_txt += `Comment : ${get_result.comment}\n`
-                    ini_txt += `Tag : ${get_result.tag.join(", ")}\n`
-                    ini_txt += `Description : ${get_result.description}\n`
-                    ini_txt += "Link : \n"
-                    ini_link = get_result.link
-                    for (var x of ini_link) {
-                        ini_txt += `${x.type} - ${x.link}\n\n`
-                    }
-                    thumbnail = await getBuffer(get_result.thumbnail)
-                    await herman.sendMessage(from, thumbnail, image, { quoted: lol, caption: ini_txt })
 break
 case 'suit':
   if (args.length < 1) return reply('Pilih gunting/batu/kertas')
@@ -1722,7 +1572,7 @@ case 'suit':
 					  reply('Pilih gunting/batu/kertas')
 					}
 break
-//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Nekell H4xor)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣(Herman Chanel)▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣//
 case 'slot':
             const somtoy = sotoy[Math.floor(Math.random() * sotoy.length)]
             herman.sendMessage(from, `[  🎰 | SLOTS ]\n-----------------\n🍋 : 🍌 : 🍍\n${somtoy}<=====\n🍋 : 🍌 : 🍍\n[  🎰 | SLOTS ]\n\nKeterangan : Jika anda Mendapatkan 3Buah Sama Berarti Anda Menang\n\nContoh : 🍌 : 🍌 : 🍌<=====`, MessageType.text, { quoted: mek })
@@ -1808,8 +1658,8 @@ break
         case 'stickerwm':
         case 'sticker':
         case 's':
-          var a = "NEKELL GANTENG BANGET GA ADA OBAT!";
-          var b = "KAMU KAYA KONTOL:V";
+          var a = "Dibuat Oleh Hermansyah";
+          var b = "+6283146208804";
           if (isMedia && !mek.message.videoMessage || isQuotedImage ) {
           const encmedia = isQuotedImage   ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
            media = await herman.downloadAndSaveMediaMessage(encmedia)
@@ -1881,7 +1731,7 @@ break
           var menulist = herman.prepareMessageFromContent(from, {
             "listMessage" :{
               "title": `${ucapanWaktu} kak ${pushname} \n❀Bot Info❀\n❀*Name Bot*: ${botname}\n❀*Owner Bot*: ${name}\n❀*Prefix*: Multi Prefix\n❀*Baterai* ${battery.persen}\nNo Spam No Telfon!!!`,
-              "description": `bot ini berjalan selama \n${runtime(process.uptime())} Suport Terus Ya Dan Jangan Lupa Donasi😊`,
+              "description": `bot ini berjalan selama \n${runtime(process.uptime())} Suport Terus Ya Nanti Bakal Update V3`,
               "buttonText": "Sellect",
               "listType": "SINGLE_SELECT",
               "sections": [{
@@ -1889,15 +1739,15 @@ break
                 "rows": [{
                     "title": "menu",
                     "rowId": "0",
-                    "description": "©Created By NekellH4xor🔥"
+                    "description": "Menampilkan Seluruh Fitur Bot"
                   },{
                     "title": "owner",
                     "rowId": "1",
-                    "description": "©Created By NekellH4xor🔥"
+                    "description": "Owner Bot"
                   },{
                     "title": "donasi",
                     "rowId": "2",
-                    "description": "©Created By NekellH4xor🔥"
+                    "description": "Donasi sekilasnya aja.."
                   }]
               }]
             }
@@ -1981,7 +1831,7 @@ const serialUser = createSerial(18)
          herman = await getBuffer(`http://hadi-api.herokuapp.com/api/card/verify?nama=${encodeURI(pushname)}&member=${register.length}&seri=${serialUser}&pp=${ppimg}&bg=https://telegra.ph/file/42e197bd1f295a71cab5b.jpg`)
              buttons = [{buttonId: `!menu`,buttonText:{displayText: `🏷️MENU`},type:1},{buttonId:`${prefix}sc`,buttonText:{displayText:'SC BOT🚀'},type:1}]
               imageMsg = (await herman.prepareMessageMedia(ikyads, "imageMessage", { thumbnail: ikyads, })).imageMessage
-              buttonsMessage = {footerText: 'By Nekell H4xor', imageMessage: imageMsg,
+              buttonsMessage = {footerText: 'By Herman Chanel', imageMessage: imageMsg,
               contentText:`${anuu}`,buttons,headerType:4}
               prep = await herman.prepareMessageFromContent(from,{buttonsMessage},{quoted: fmek})
               herman.relayWAMessage(prep)
@@ -1996,33 +1846,33 @@ herman.sendMessage(from, man, MessageType.audio, {quoted: fvideo, mimetype: 'aud
         break;
           case 'owner':
           const vacrd = `BEGIN:VCARD\n`+`VERSION:3.0\n`+
-                        `FN:Owner CornFake-Bot\n`+
+                        `FN:owner Bot\n`+
                         `ORG:Developer ${herman.user.name}\n`+
-                        'TEL;type=CELL;type=VOICE;waid=6289695073357' +
-                        ':+6289695073357\n' + 
+                        'TEL;type=CELL;type=VOICE;waid=62882220799992' +
+                        ':+62882220799992\n' + 
                         'END:VCARD'
-          herman.sendMessage(from, {display: "ownerbot", vcard: vacrd}, contact, {quoted: mek})
+          herman.sendMessage(from, {display: "owner Bot", vcard: vacrd}, contact, {quoted: mek})
           man = fs.readFileSync('./🎧/hermanchanel1.mp3');
 herman.sendMessage(from, man, MessageType.audio, {quoted: fvideo, mimetype: 'audio/mp4', ptt:true})
           break;
         case 'github':
-          herman.sendMessage(from, "*❏ MAU NYARI SC YA? DI YT BANYAK COK TAPI YA DI ENC+GADA APIKEY:V", text)
+          herman.sendMessage(from, "*❏ My github for download this script*\n\nhttp://github.com/Hermanchanel", text)
           break;
           
-          case 'fb':
-      reply('https://facebook.com/nekellganss jangan lupa donasi✨')
+          case 'yt':
+      reply('https://youtube.com/channel/UCPhU6uA_3gUaEvyrFZFgJqg Jangan Lupa Subscribe Ya Kak✨')
       break;
       case 'gc':
-      reply('https://chat.whatsapp.com/J9CRXS0KuDsLaH68uvuRcU📌')
+      reply('https://chat.whatsapp.com/Kt69lMVe90WLBkCFcoYIyA Jangan lupa masuk ya📌')
       break;
       case 'ig':
-      reply('Jangan Lupa Folow Ig Owner Ya @nekellgatau')
+      reply('Jangan Lupa Folow Ig Owner Ya @cal_me_herman')
       break;
-      case 'nekell':
+      case 'herman':
       reply('Y')
       break;
           default:
-        if (budy.includes("https://","http://",".")) {
+        if (budy.includes("https://chat.whatsapp.com/")) {
 				if (!isGroup) return
 				if (!isAntiLink) return
 				if (isGroupAdmins) return reply('Atasan grup mah bebas yakan :v')
@@ -2035,7 +1885,7 @@ herman.sendMessage(from, man, MessageType.audio, {quoted: fvideo, mimetype: 'aud
 if (!isOwner) return reply("anda bukan owner yak:)")
 qur = budy.slice(2)
 exec(qur, (err, stdout) => {
-if (err) return reply(`@CornFakeBotz:~ ${err}`)
+if (err) return reply(`@HermanBotz:~ ${err}`)
 if (stdout) {
 reply(stdout)
 }
@@ -2053,7 +1903,7 @@ reply(e)
 if (budy.includes("Herman")){  // JAN DI UBAH TOD
         reply(`*${pushname}*, ngpain manggil owner gw`)
         const d = fs.readFileSync('./media/anjim.webp');
-        herman.sendMessage(from, d, sticker, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "Jangan Lupa Donasi", 'jpegThumbnail': fs.readFileSync('./media/herman.webp')}}}})
+        herman.sendMessage(from, d, sticker, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "Subscribe Herman Chanel", 'jpegThumbnail': fs.readFileSync('./media/herman.webp')}}}})
         }
 if (budy.includes("kontol")){  // JAN DI UBAH TOD
         reply(`*${pushname}*, lu yang kontol`)
@@ -2061,21 +1911,15 @@ if (budy.includes("kontol")){  // JAN DI UBAH TOD
         if (budy.includes("🗿")){  
         reply(`Njir Ada Batu Cok`)
         }
-         if (budy.includes("donate")){  
-        reply(`Dana : 089695073357`)
+         if (budy.includes("asu")){  
+        reply(`Ngajak Gelud?`)
         }
-         if (budy.includes("donasi")){  
-        reply(`Dana : 089695073357`)
-        }
-        if (budy.includes("kell,Kell")){
-        reply(`Iya Itu Owner Ku`)
-        }
-        if (budy.includes("Nekell,nekell")){
-        reply(`Iya Itu Owner Ku`)
+         if (budy.includes("anj")){  
+        reply(`Ngapain Lu Manggil Anjing`)
         }
 if (body.startsWith(`${prefix}${command}`)) {
 comd = `      ────────────────\nʜᴇɪ *${pushname}* !!!\nperintah/comand *${prefix}${command}*\nTidak Ada Dalam *${prefix}menu*\n      ────────────────`
-herman.sendMessage(from, comd, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "JANGAN LUP DONASI MEKK", 'jpegThumbnail': fs.readFileSync('./media/lord.webp')}}}})
+herman.sendMessage(from, comd, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "Woi Subscribe\nHerman Chanel", 'jpegThumbnail': fs.readFileSync('./media/lord.webp')}}}})
 				  }
 				  	if (budy.includes("bot")){
 		herman.updatePresence(from, Presence.composing)
