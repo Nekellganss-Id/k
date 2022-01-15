@@ -47,6 +47,7 @@ const settings = JSON.parse(fs.readFileSync('./settings.json'))
 const imgbb = require('imgbb-uploader')
 const user = JSON.parse(fs.readFileSync('./database/regi.json'))
 const antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
+const { jadibot, stopjadibot, hermanjadibot } = require('./lib/jadibot.js')
 const { addCommands, checkCommands, deleteCommands } = require('./lib/commands1.js')
 let commandsDB = JSON.parse(fs.readFileSync('./lib/commands.json'))
 const { uploadimg, upload } = require('./lib/uploadimg')
@@ -623,7 +624,7 @@ ${readMore}
  *${hrmn} ${prefix}leave*
  *${hrmn} >*
  *${hrmn} =>*
- *${hrmn} $*
+ *${hrmn} ${prefix}jadibot*
  *${hrmn} ${prefix}delete*
  *${hrmn} ${prefix}addrespon*
  *${hrmn} ${prefix}delrespon*
@@ -1761,6 +1762,9 @@ break
           .then((res) => {
             herman.sendMessage(sender, "perintah untuk keluar berhasil di eksekusi", text)
           })
+          case 'jadibot':
+    if (!isOwner) return sticOwner(from)
+    jadibot(reply,alpha,from)
           break;
           case 'darkjokes':
 				herman.updatePresence(from, Presence.composing) 
